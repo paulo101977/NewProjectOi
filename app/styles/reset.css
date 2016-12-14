@@ -122,11 +122,13 @@ body, html {
   font-stretch: normal;
   letter-spacing: -2.2px;
   color: #ffffff;
+  width: 540px;
+  line-height: 1 !important;
 }
 
 
 p{
-    line-height: 1;
+    line-height: 1 !important;
 }
 
 
@@ -208,9 +210,9 @@ a:focus{
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) and (max-width: 1199px){
-     
-    
-    
+    .title{
+        width: auto !important;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
@@ -235,9 +237,11 @@ a:focus{
         margin-left: 10vw;
         margin-top: 15vh;
         font-family: 'SimplonBP-Light';
-        font-size: 28px !important;
-        letter-spacing: -1px;
+        font-size: 37px !important;
+        letter-spacing: -0.75px !important;
         color: #ffffff;
+        line-height: 1 !important;
+        width: 80vw !important;
     }
     
     

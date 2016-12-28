@@ -25,26 +25,66 @@ body, html {
 .content-home{
     top: 0px;
     z-index: 1000 !important;
-    position: absolute !important;
-    left: 40vw;
+    /*position: absolute !important;
+    left: 40vw; */
 }
 
-.ui-input-btn > input,
-.ui-input-btn > div
-{
-    visibility: visible;
+.row{
+    background-image: linear-gradient(-180deg, #EA288C 0%, #FF6D00 70%);
+    background-image: linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%) !important;
 }
 
-/* hidden the mobile plain text button */
-.ui-input-btn{
-    visibility: hidden;
+.align-items{
+    display: flex;
+    vertical-align: middle;
+    flex-direction: row;
+    flex-flow: inherit;
+    flex-wrap: nowrap;
+    flex: 1;
+    align-self: center;
+    align-items: center;
 }
 
-/*.side-bar-after-effect{
-    max-width: 15vh !important;
-}*/
+.popover{
+    left: 0px !important;
+    top: -7vh !important;
+    border-width: 0px !important;
+    height: 30px !important;
+    width: 140px !important;
+    object-fit: contain;
+    border-radius: 2px !important;
+    background-color: #e03d6f !important;
+    font-family: 'SimplonBP-Light' !important;
+    font-size: 14px  !important;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.3;
+    color: #ffffff !important;
+    padding: 0px !important;
+    text-align: center !important;
+    display: inline-block;
+    vertical-align: middle !important;
+    line-height: normal !important;
+    box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+}
 
-/* END Test */
+
+.popover > .arrow,
+.popover > .arrow:after{
+    bottom: -10px !important;
+    left: 10% !important;
+    border-top-color: #e03d6f !important;
+    border-width: 7px !important;
+    margin-left: -7px !important;
+    top: auto !important;
+}
+
+.popover-content{
+    padding: 6px 14px !important;
+    width: 140px !important;
+}
 
 
 .container-fluid{
@@ -66,363 +106,14 @@ body, html {
     margin-top: 60px
 }
 
-/* text on side bar */
-.sidebar_text {
-  margin-left: 50px;
-  width: 266px;
-  height: 126px;
-  font-family: 'SimplonOi-Headline';
-  font-size: 70px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 0.9;
-  letter-spacing: -4px;
-  color: #ffffff;
-}
-
-.item-row{
-    height: 33.33vh !important;
-    margin-left: 0px !important;
-    border: solid 1px #dddddd;
-    background-color: white !important;
-}
-
-.item-last{
-  background-color: #f5f5f5 !important;
-}
-
-/* items on cpf page */
-.item-row-cpf{
-    height: 50vh !important;
-    margin-left: 0px !important;
-    border: solid 1px #dddddd;
-    display: flex;
-    align-items: center;
-}
 
 
-
-/* remove the border */
-input {
-  border-width:0px !important;
-  border:none !important;
-}
-
-
-/* below customize checkbox */
-.checkbox-container{
-    vertical-align: middle;
-}
-
-/* align label to checkbox */
-label {
-  display: block;
-  padding-left: 15px;
-  line-height: 19px;
-  text-indent: 15px;
-  margin-right: 70px !important;
-}
-
-
-input[type="checkbox"].without-eye{
-    opacity: 0;
-}
-
-input[type="checkbox"] + label
-{
-    background-color: #fff;
-    border: 0.08rem solid #999999;
-    width: 21px  !important;
-    height: 21px;
-    float: right;
-    display: block;
-    margin-right: 70px !important;
-    background: none;
-}
-
-input[type="checkbox"]:checked + label {
-    content: ' ';
-    width: 21px;
-    height: 21px;
-    background: url(../svg/checkbox_on.svg);
-    background-repeat: no-repeat;
-    border: none;
-    *overflow: hidden;
-    color : #C72177;
-}
-
-
-input[type="checkbox"]:hover + label{
-    border: 0.08rem solid #C72177;
-    display: block;
-}
-
-input[type="checkbox"]:checked:hover + label{
-    border: none;
-}
-
-
-
-
-/* remove outline border */
-input:focus {
-    outline-width: 0;
-}
-
-/* the above email input text */
-.email-name{
-  position: absolute !important;
-  margin-top: 10vh;
-  margin-left: 87px !important;
-  font-family: SimplonBP-Regular;
-  font-size: 14px;
-  font-weight: normal !important;
-  font-style: normal !important;
-  font-stretch: normal !important;
-  letter-spacing: -0.5px;
-  color: #777777;
-}
-
-/* email input */
-/* the password input */
-/* the cpf input */
-.password , .cpf, .email{
-  font-family: 'SimplonBP-Light';
-  font-size: 42px;
-  font-weight: 300;
-  margin-left: 87px !important;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -2px;
-  width: 100%;
-  background-color: white !important;
-}
-
-.email{
-    color: #777777;
-}
-
-.password , .cpf {
-    color: #222222;
-}
-
-.in-cpf-page-text{
-    width: 204px !important;
-}
-/* end */
-
-/* placeholder password after */
-.password-after, .cpf-after{
-    font-family: 'SimplonBP-Light';
-    position: absolute;
-    margin-top: 7vh;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: -0.5px;
-    color: #777777;
-    margin-left: 87px !important;
-}
-
-/* placeholder password after */
-.cpf-after{
-    margin-top: -35vh !important;
-    margin-left: 87px !important;
-    z-index: 100;
-}
-
-/* error message */
-.error-message{
-    position: absolute;
-    margin-top: 7vh;
-    font-size: 14px;
-    font-weight: normal;
-    font-style: normal;
-    font-stretch: normal;
-    letter-spacing: -0.5px;
-    color: #ff0000;
-    margin-left: 87px !important;
-}
-
-.float-right{
-    text-align: right;
-    display: block;
-    float: right !important;
-    clear: right !important;
-    width: 100%;
-}
-
-.margin-right{
-    margin-right: 76px !important;
-    width: 4vw !important;
-    float: right !important;
-    clear: right !important;
-}
-
-/* the button continue */
-.btn-continue, .loading{
-  margin-left: 87px !important;
-  font-family: SimplonBP-Light;
-  font-size: 42px;
-  font-weight: 300;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -2px;
-  color: #cccccc;
-}
-
-/* cpf img */
-.loading, .sucess_img , .error_img{
-    background-repeat: no-repeat;
-    margin: 0px !important;
-}
-
-.error_cpf{
-    display: none;
-}
-
-/*.sucess_cpf, .error_cpf{
-    display: flex;
-    align-items: center;
-}*/
-
-.sucess_text, .error_txt{
-    margin-right: 14px;
-    font-family: 'SimplonBP-Light' !important;
-    font-size: 21px;
-    font-style: normal;
-    font-stretch: normal;
-    line-height: 1.33;
-    letter-spacing: -0.7px;
-    color: #4a4a4a;
-}
-
-
-/* container to img loading */
-.loading-container{
-    margin-left: 87px !important;
-}
-
-/* text on cpf page */
-.know_cpf , 
-.sucess_text , 
-.error_text{
-  font-family: 'SimplonBP-Light';
-  padding-left: 0px !important;
-  font-size: 21px;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: -0.7px;
-  color: #4a4a4a;
-}
-
-.sucess_text , 
-.error_text,
-.know_cpf.visible{ /* fix the margin error */ 
-   margin-left: 15px !important; 
-}
-
-.know_cpf,
-.sucess_cpf,
-.error_cpf,
-.loading-container{
-   display: none;
-}
-
-.visible{
-   display: flex !important;
-   align-items: center; 
-   margin-left: 87px !important;
-}
-
-.invisible{
-    display: none !important;
-}
-
-.btn-continue:active{
-  color: #e03d6f;
-}
-
-
-/* eye input checkbox */
-input[type="checkbox"].eye_style{
-    display: none;
-    border: none;
-    border-width: 0px;
-}
-
-input[type="checkbox"].eye_style + label{
-    display: none;
-    width: 26px !important;
-    height: 26px;
-    background-image: url(../svg/eye_unchecked.svg);
-    background-repeat: no-repeat;
-    border: none;
-    border-width: 0px;
-    margin: 0px !important;
-}
-
-input[type="checkbox"].eye_style:active + label, 
-input[type="checkbox"].eye_style:checked + label{
-    display: none;
-    width: 26px !important;
-    opacity: 1;
-    background-image: url(../svg/eye_svg.svg);
-    background-repeat: no-repeat;
-}
-
-input[type="checkbox"].eye_style:hover{
-    display: none;
-    width: 26px !important;
-    opacity: 1;
-    border: none;
-    border-width: 0px;
-    background-image: url(../svg/eye_svg.svg) !important;
-    background-repeat: no-repeat !important;;
-}
 
 /* center child items on screen */
 .vertical-align-items{
     height: 100% !important;
 }
 
-
-/* arrow "Entrar" button */
-.arrow-continue{
-    float: right;
-    vertical-align: middle;
-    background: url(../svg/next.svg);
-    background-repeat: no-repeat;
-    width: 10px;
-    height: 23px;
-    border: 0 !important;
-    border-width: 0px !important;
-    outline: none !important;
-}
-
-
-.img-container{
-    display: inline-block !important;;
-    float: right !important;
-    clear: right !important;;
-    width: 100%;
-    margin-right: 70px;
-}
-
-
-.text-show{
-  font-family: SimplonBP-Light;
-  font-size: 21px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  letter-spacing: -0.6px;
-  color: #dddddd;
-  margin-right: 76px !important;
-}
 
 
 
@@ -438,34 +129,6 @@ input[type="checkbox"].eye_style:hover{
     padding-left: 0px !important;
 }
 
-/* popover */
-.popover{
-    background-color: white !important;
-    width: 364px !important;
-    max-width: 364px !important;
-    height: 50px !important;
-    color: #222222 !important;
-    font-size: 14px !important;
-    padding-left: 7px !important;
-    font-family: 'SimplonBP-Regular' !important;
-    border: #dbdbdb solid 2px !important;
-    border-radius: 2px !important;
-    -webkit-box-shadow: 0 0 0 white !important;
-    box-shadow: 0 0 0 white !important;
-    left: 87px !important;
-}
-
-.popover-content{
-    width: 364px !important;
-    max-width: 364px !important;
-    height: 50px !important;
-}
-
-.popover > .arrow {
-    top: -21px !important;
-    left: 11% !important;
-    border-width: 10px !important;
-}
 
 
 
@@ -494,12 +157,25 @@ input[type="checkbox"].eye_style:hover{
     height : auto !important;
 }
 
+.sidebar-home{
+    text-align: left;
+}
+
+.background-white{
+    position: absolute;
+    left: 16.6666vw;
+    width: calc(100vw - 16.6666vw);
+    height: 100vh;
+    background-color: white;
+    z-index : 0;
+}
+
 
 .home_logo{
     margin-left: 36px;
-    margin-top: 60px;
-    max-width: 10vw !important;
-    min-width: 10vw !important;
+    margin-top: 70px;
+    max-height: 62.5px;
+    min-height: 62.5px;
 }
 
 .img_container{
@@ -528,7 +204,7 @@ input[type="checkbox"].eye_style:hover{
 }
 
 .exit_text{
-  position: absolute;
+  position: absolute !important;
   top: 90vh;
   width: 31px;
   height: 21px;
@@ -537,10 +213,10 @@ input[type="checkbox"].eye_style:hover{
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.75px;
   color: #ffffff;
-  margin-left: 31px;
   margin-bottom: 60px !important;
+  margin-left: 36px;
 }
 
 .scrollable-menu {
@@ -561,6 +237,7 @@ input[type="checkbox"].eye_style:hover{
 .menu-item{
     border-bottom: solid 2px #dddddd;
     min-height: 25vh;
+    min-height: 210px;
     position: relative !important;
     /* display: flex; */
     /*align-items: center;*/
@@ -573,10 +250,10 @@ input[type="checkbox"].eye_style:hover{
     position: absolute;
     top: 0;
     left: calc(100% - 6px);
-    min-height: 25vh;
+    min-height: 210px;
     background-image:
       linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%);
-    background-size: 6px 100% !important;
+    background-size: 6px 100%;
     background-position: 0 0, 100% 0; 
     background-repeat: no-repeat; 
     min-width: 6px ;
@@ -587,7 +264,7 @@ input[type="checkbox"].eye_style:hover{
 .menu-item-align{
     display: table-cell;
     vertical-align: middle;
-    height: 25vh;
+    height: 210px;
     /* width: 100% !important; */
     min-width: 17vw !important;
     margin-left: auto !important;
@@ -605,7 +282,7 @@ input[type="checkbox"].eye_style:hover{
     font-style: normal;
     font-stretch: normal;
     line-height: 1.5;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.75px;
     text-align: center;
     color: #999999;
 }
@@ -633,28 +310,31 @@ input[type="checkbox"].eye_style:hover{
 }
 
 #fullpage > .section > .content > p ,
-#fullpage > .section > .fp-tableCell > .content > p{
-    margin-bottom: 5vh !important;
+#fullpage > .section > .fp-tableCell > .content > p,
+.wifi > .fp-tableCell > .wrap > .content > p{
+    margin-bottom: 5vh;
 }
 
 
 /* start */                  
 .start > .title,
 .start > .fp-tableCell > .title{
+    font-family: 'SimplonBP-Regular';
     font-size: 63px;
     font-weight: 300;
     line-height: 1.11;
-    letter-spacing: -2.2px;
+    letter-spacing: -0.75px;
+    position: relative;
 }
 
 .start > .content,
 .start > .fp-tableCell > .content{
-    width: 60vw;
+    width: 700px;
     padding-right: 4vw;
     margin-top: 38px;
     font-size: 28px;
     line-height: 1.5;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.75px;
 }
 
 /* phone */
@@ -665,8 +345,10 @@ input[type="checkbox"].eye_style:hover{
 
 .telephone > .title,
 .telephone > .fp-tableCell > .title{
+  font-family: 'SimplonBP-Regular';
+  font-weight: 300;
   font-size: 42px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.75px;
   color: #222222; 
   margin-bottom: 32px;
 }
@@ -674,12 +356,12 @@ input[type="checkbox"].eye_style:hover{
 
 .telephone > .content,
 .telephone > .fp-tableCell > .content{
-  width: 60vw !important;
+  width: 700px;
   padding-right: 4vw;
   font-size: 28px;
   font-weight: 300;
   line-height: 1.25;
-  letter-spacing: -1.1px;
+  letter-spacing: -0.75px;
   color: #222222;
 }
 
@@ -694,9 +376,25 @@ input[type="checkbox"].eye_style:hover{
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.75px;
   text-align: center;
   color: #e03d6f;
+}
+
+.btn_start{
+  width: 280px;
+  height: 70px;
+  border-radius: 3px;
+  background-color: #ffffff;
+  border: solid 1px #ef3a67;
+  font-family: "SimplonBP-Light";
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.4px;
+  text-align: center;
+  color: #ef3a67;
 }
 
 
@@ -705,8 +403,10 @@ input[type="checkbox"].eye_style:hover{
 .wifi > .title,
 .wifi > .fp-tableCell > .title,
 .wifi > .fp-tableCell > .wrap > .title{
+  font-family: 'SimplonBP-Regular';
+  font-weight: 300;
   font-size: 42px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.75px;
   color: #222222;
   margin-bottom: 36px;
 }
@@ -715,13 +415,14 @@ input[type="checkbox"].eye_style:hover{
 .wifi > .content,
 .wifi > .fp-tableCell > .content,
 .wifi > .fp-tableCell > .wrap > .content{
-  width: 60vw !important;
+  width: 700px;
   padding-right: 4vw;
   font-size: 28px;
   line-height: 1.25;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.75px;
   color: #222222;
 }
+
 
 .wifi > .btn_connection,
 .wifi > .fp-tableCell > .btn_connection,
@@ -732,20 +433,21 @@ input[type="checkbox"].eye_style:hover{
   background-color: #ffffff;
   border: solid 1px #e03d6f;
   font-size: 21px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.75px;
   text-align: center;
   color: #e03d6f;
-  margin-bottom: 20px;
+  margin-bottom: 5vh;
 }
 
 .wifi > .footer,
 .wifi > .fp-tableCell > .footer,
-.wifi > .fp-tableCell > .wrap > .footer
+.wifi > .fp-tableCell > .wrap > .footer,
+.wifi > .fp-tableCell > .wrap > .footer > p
 {
-  width : 60vw;
+  width : 700px;
   font-size: 21px;
   line-height: 1.43;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.75px;
   color: #222222;
   padding-right: 4vw;
 }
@@ -761,8 +463,10 @@ input[type="checkbox"].eye_style:hover{
 .oiplay > .fp-tableCell > .title , 
 .recharge > .fp-tableCell > .title 
 {
+  font-family: 'SimplonBP-Regular';
+  font-weight: 300;
   font-size: 42px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.75px;
   color: #222222;
   margin-bottom: 36px;
   max-height: 100vh !important;
@@ -772,13 +476,13 @@ input[type="checkbox"].eye_style:hover{
 .oiplay > .fp-tableCell > .content , 
 .recharge > .content ,
 .recharge > .fp-tableCell > .content{
-  width: 60vw;
+  width: 700px;
   padding-right: 4vw;
   font-size: 28px;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
-  letter-spacing: -1.1px;
+  letter-spacing: -0.75px;
   color: #222222;
 }
 
@@ -790,12 +494,12 @@ input[type="checkbox"].eye_style:hover{
   height: 70px;
   border-radius: 3px;
   font-size: 21px;
-  letter-spacing: -0.5px;
+  letter-spacing: -0.75px;
   background-color: #ffffff;
   border: solid 1px #e03d6f;
   text-align: center;
   color: #e03d6f;
-  margin-bottom: 20px;
+  margin-bottom: 5vh;
 }
 
 .oiplay > .footer ,
@@ -804,7 +508,7 @@ input[type="checkbox"].eye_style:hover{
 .recharge > .fp-tableCell > .footer{
   font-size: 21px !important;
   line-height: 1.43;
-  letter-spacing: -0.8px;
+  letter-spacing: -0.75px;
   color: #222222;
   padding-right: 4vw;
 }
@@ -822,9 +526,11 @@ input[type="checkbox"].eye_style:hover{
 .help > .title,
 .help > .fp-tableCell > .title,
 .help > .fp-tableCell > .wrap > .title{
+  font-family: 'SimplonBP-Regular';
+  font-weight: 300;
   margin-top: 76px;
   font-size: 42px;
-  letter-spacing: -1.5px;
+  letter-spacing: -0.75px;
   color: #222222;
   margin-bottom: 42px;
 }
@@ -842,7 +548,7 @@ ol div li { display: block; }
 .custom-li:before{
     font-size: 28px;
     line-height: 1.25;
-    letter-spacing: -1.1px;
+    letter-spacing: -0.75px;
     color: #777777;
     content: counter(item) ". ";
     counter-increment: item;
@@ -852,21 +558,63 @@ ol div li { display: block; }
 .custom-li {
     font-size: 28px;
     line-height: 1.25;
-    letter-spacing: -1.1px;
+    letter-spacing: -0.75px;
     color: #222222;
     margin-left: 0px !important;
     padding-left: 0px !important;
+}
+
+.collapse,
+.collapsing,
+.collapse.in
+{
+    padding-left: 14px !important;
+}
+
+ul{
+    display: inline-block !important;
+}
+
+ul > li{
+  width: 640px;
+  font-family: 'SimplonBP-Light';
+  font-size: 18px;
+  font-weight: 100;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: -0.75px;
+  color: #222222;
+}
+
+.item{
+    cursor: pointer;
+}
+
+.item > div > ul {
+    padding-left: 0px !important;
+    margin-bottom: 14px;
+    margin-top: 14px;
+}
+
+ul > li:before{
+    content : '•' !important;
+    padding-right: 12px;
 }
 
 /* item */
 .help > .content > ol > .item,
 .help > .fp-tableCell > .content > ol > .item,
 .help > .fp-tableCell > .wrap > .content > ol > .item{
-    border-top: solid 1px #dddddd;
+    /* border-top: solid 1px #dddddd; */
     border-bottom: solid 1px #dddddd;
     padding-top: 33px;
     padding-bottom: 33px;
     margin-right: 70px;
+}
+
+.help > .fp-tableCell > .wrap > .content > ol > .item:first-child{
+    border-top: solid 1px #dddddd;
 }
 
 
@@ -878,7 +626,6 @@ to implements the scroll vertical */
     height: 100vh ;
     max-height: 100vh !important;
     overflow-y: scroll !important;
-    width: 60vw;
 }
 
 
@@ -894,15 +641,22 @@ to implements the scroll vertical */
 .help > .fp-tableCell > .wrap > .content > ol > .item > .collapsing,
 .help > .fp-tableCell > .wrap > .content > ol > .item > .collapse.in
 {
-    width: 60vw;
+    width: 700px;
     padding-right: 4vw;
     font-size: 18px;
     line-height: 1.33;
-    letter-spacing: -0.2px;
+    letter-spacing: -0.75px;
     color: #222222;
     margin-left: 38px;
     margin-top: 14px;
-    margin-bottom: 42px;
+    
+}
+
+/* change the cursor to pointer or hand */
+.help > .fp-tableCell > .wrap > .content > ol > .item > li
+{
+    cursor: hand;
+    cursor: pointer;
 }
 
 .help > .footer,
@@ -910,17 +664,31 @@ to implements the scroll vertical */
 .help > .fp-tableCell > .wrap > .footer{
   font-size: 28px;
   line-height: 1.25;
-  letter-spacing: -1.1px;
+  letter-spacing: -0.75px;
   color: #222222;
   margin-top: 67px;
   margin-bottom: 99px !important;
   padding-right: 4vw;
 }
 
+i{
+    font-weight: 300;
+}
+
 .help > .footer > span,
 .help > .fp-tableCell > .footer > span,
-.help > .fp-tableCell > .wrap > .footer > span{
-    color: #e03d6f;
+.help > .fp-tableCell > .wrap > .footer > span,
+div > p > a{
+    color: #e03d6f !important;
+}
+
+a:active,
+{
+    text-decoration: none !important;
+}
+
+p >  a{
+    text-decoration: underline !important;
 }
 
 .help_item_center,
@@ -928,8 +696,20 @@ to implements the scroll vertical */
     height: 100%;
 }
 
+
+
 /* help center float content and show background img */
-.arrow_item_help + .img_container_help{
+.img_container_help{
+    height: 10px;
+    width: 23px;
+    text-align: right;
+    margin-left: auto;
+    float: right;
+    clear: right;
+     background-image: url(../svg/arrow_down.svg) !important
+}
+
+.img_container_help_down{
     height: 10px;
     width: 23px;
     text-align: right;
@@ -937,16 +717,6 @@ to implements the scroll vertical */
     float: right;
     clear: right;
     background-image: url(../svg/arrow_up.svg)
-}
-
-.arrow_item_help.collapsed + .img_container_help{
-    height: 10px;
-    width: 23px;
-    text-align: right;
-    margin-left: auto;
-    float: right;
-    clear: right;
-    background-image: url(../svg/arrow_down.svg) !important
 }
 
 
@@ -964,12 +734,36 @@ to implements the scroll vertical */
 .btn_hover_dash:hover,
 .btn_hover_dash:focus,
 .btn_hover_dash:active
+.btn_start:hover,
+.btn_start:focus,
+.btn_start:active
 {
     border-radius: 3px !important;
     background-color: #e03d6f !important;
     border: solid 1px #ffffff !important;
     color: white !important;
     outline: 0 !important;
+}
+
+.link_after{
+    margin-top: 5vh;
+}
+
+.link_after > a{
+    font-family: "SimplonBP-Light";
+    font-size: 21px;
+    font-weight: 300;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.8px;
+    color: #4a4a4a;
+}
+
+.link_after > a:hover,
+.link_after > a:active,
+.link_after > a:focus{
+    color: #4a4a4a;
+    text-decoration: underline !important;
 }
 
 
@@ -1022,6 +816,8 @@ to implements the scroll vertical */
 }
 
 .confirmation > .title{
+  font-family: 'SimplonBP-Regular';
+  font-weight: 300;
   font-size: 63px;
   font-weight: normal;
   font-style: normal;
@@ -1087,18 +883,52 @@ to implements the scroll vertical */
     overflow-y: scroll;
 }
 
+.text_container_help{
+    float: right;
+    clear: right;
+}
+
+.break_line{
+    display: none;
+}
+
 /* home screen */
 /* I had to modify this to resize on table size */
 /* before the max-width was 1200px */
-@media (max-width: 767px){
+/* before it is 768px */
+/* @media (max-width: 767px){ */
+@media (max-width: 413px){
     
     .sidebar-home{
-        height: 30vh !important;
+        height: 70px !important; /* fix auto resize mobile */
     }
     
     .scrollable-menu{
         overflow-x: scroll !important;
         overflow-y: hidden !important;
+    }
+    
+    .title{
+        font-size: 24px;
+        margin-bottom: 0px !important;
+    }
+    
+    .title,
+    .p,
+    .content,
+    .footer,
+    button{
+        line-height: 21px;
+    }
+    
+    .footer{
+        width: inherit;
+    }
+    
+    .p,
+    .content,
+    .footer{
+        font-size: 16px;
     }
     
     .scrollable-menu , 
@@ -1107,36 +937,54 @@ to implements the scroll vertical */
     #navbar-dashboard > ul,
     #navbar-dashboard > ul > .section
     {
-        width: auto !important;
-        max-height: 15vh !important;
+        max-height: 72px !important; /* fix auto resize mobile */
+        min-width: 100vw !important;
         max-width: 100vw !important;
         display: flex;
     }
     
     .menu-item{
-        min-height: 15vh !important;
-        max-height: 15vh !important;
-        max-width: 25vw !important;
+        min-height: 72px !important;
+        max-height: 72px !important;
+        max-width: 89px !important;
         float: left;
         border-bottom: none;
-        border-left: solid 2px #dddddd;
+        border-right: solid 2px #dddddd;
+    }
+    
+    .menu-item-text > span{
+        color: #999999 !important;
+    }
+    
+    .help > .menu-item{
+        border-right: none;
     }
     
     .menu-item-align{
         display: table-cell;
         vertical-align: middle;
-        height: 15vh !important;
+        /* height: 15vh !important;
         min-width: 25vw !important;
-        max-width: 25vw !important;
+        max-width: 25vw !important; */
+        min-height: 72px !important;
+        max-height: 72px !important;
+        max-width: 89px !important;
+        min-width: 89px !important;
         margin-left: auto !important;
         margin-right: auto !important;
         flex-grow: 1 !important;
     }
     
+    #fullpage > .section ,
+    #fullpage > .section > .fp-tableCell{
+        display: block !important;
+    }
+    
     #navbar-dashboard > ul > .section > li{
-        min-height: 15vh !important;
-        max-height: 15vh !important;
-        max-width: 25vw !important;
+        font-size: 10px;
+        min-height: 72px !important;
+        max-height: 72px !important;
+        max-width: 89px !important;
         float: left;
     }
     
@@ -1158,8 +1006,136 @@ to implements the scroll vertical */
     
     
     #fullpage{
+        display: block;
         float: left !important;
-        height: 70vh !important;
+        height: inherit;
+        width: 100vw;
+        display: flex;
+        margin-left: 0px !important;
+        padding-left:  0px !important;
+        overflow-x: hidden !important;
+        overflow-y: hidden;
+    }
+    
+    #fullpage > .section {
+        height: calc(100vh - 142px) !important;
+        min-width: 100vw !important;
+        flex-grow: 1 !important;
+        overflow-x: hidden !important;
+        overflow-y: scroll !important;
+    }
+    
+    
+    
+    .menu-img{
+        width: 24px;
+        height: 24px;
+    }
+    
+}
+
+@media screen and (min-width: 414px) and (max-width: 767px){
+    
+    
+    .sidebar-home{
+        height: 81px ; /* fix auto resize mobile */
+    }
+    
+    .scrollable-menu{
+        overflow-x: scroll !important;
+        overflow-y: hidden !important;
+    }
+    
+    ul,
+    .scrollable-menu , 
+    #navbar-dashboard , 
+    .nav.nav-tabs.nav-stacked,
+    #navbar-dashboard > ul,
+    #navbar-dashboard > ul > .section,
+    .section-menu
+    {
+        width: 100vw;
+        max-height: 81px !important; /* fix auto resize mobile */
+        max-width: 100vw !important;
+        display: flex;
+    }
+    
+    
+    .section-menu > li,
+    .menu-item{
+        min-height: 81px !important;
+        max-height: 81px !important;
+        min-width: 20vw !important;
+        max-width: 20vw !important;
+        float: left;
+        border-bottom: none;
+        border-right: solid 2px #dddddd;
+        border-left: none;
+    }
+    
+    .menu-item-align{
+        display: table-cell;
+        vertical-align: middle;
+        height: 81px !important;
+        min-width: 20vw !important;
+        max-width: 20vw !important;
+        margin-left: auto !important;
+        margin-right: auto !important;
+        flex-grow: 1 !important;
+    }
+    
+    .title{
+        font-size: 28px !important;
+    }
+    
+    .content{
+        font-size: 16px !important;
+    }
+    
+    .footer,
+    .footer > p{
+        font-size: 16px !important;
+    }
+    
+    button{
+        width: 100% !important;
+        height: 70px !important;
+    }
+    
+    #fullpage > .section ,
+    #fullpage > .section > .fp-tableCell{
+        display: block !important;
+    }
+    
+    #navbar-dashboard > ul > .section > li{
+        font-size: 10px;
+        min-height: 81px !important;
+        max-height: 81px !important;
+        max-width: 20vw !important;
+        float: left;
+    }
+    
+    .selected{
+        position: absolute;
+        top: calc(100% - 6px) !important;
+        left: 0;
+        max-height: 6px !important;
+        height: 6px !important;
+        background-image:
+          linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%);
+        background-size: 20vw 6px !important; 
+        background-position: 0 0, 0 0 !important;
+        background-repeat: no-repeat; 
+        min-width: 20vw !important;
+        max-width: 20vw  !important;
+        background-color: transparent;
+    }
+    
+    
+    #fullpage{
+        display: block;
+        float: left !important;
+        height: calc(100vh - 151px) !important;
         width: 100vw;
         display: flex;
         margin-left: 0px !important;
@@ -1169,24 +1145,32 @@ to implements the scroll vertical */
     }
     
     #fullpage > .section {
-        height: 70vh !important;
+        height: calc(100vh - 142px);
         min-width: 100vw !important;
         flex-grow: 1 !important;
         overflow-x: hidden !important;
-        overflow-y: hidden !important;
+        overflow-y: scroll !important;
     }
     
     
-    .exit_text{
-        position: absolute !important;
-        text-align: right;
-        top: 50%;
-        left: 68%;
-        transform: translate(0 , -75%);
-        /* margin-right: 10vw; */
-        margin: 0;
-        float: right;
+    
+    .menu-img{
+        width: 24px;
+        height: 24px;
     }
+    
+    .collapse > p,
+    .collapsing > p,
+    .collapse.in > p,
+    .collapse > ul > li,
+    .collapsing > ul > li,
+    .collapse.in,
+    .collapsing
+    {
+        font-size: 16px;
+        width: 100% !important;
+    }
+    
 }
 
 /* simple max-width query */
@@ -1196,17 +1180,9 @@ to implements the scroll vertical */
     }
     
     /* home */
-    /*.sidebar-home{
-        max-width: 10vw !important;
-        min-width: 10vw !important;
-    }*/
-    
-    /* home */
-   
-    
     .home_logo{
-        max-height: 10vw !important;
-        min-height: 10vw !important;
+        max-height: 62.5px !important;
+        min-height: 62.5px !important;
     }
      /* end home */
     
@@ -1215,18 +1191,24 @@ to implements the scroll vertical */
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) and (max-width: 1199px){
+    
+    .break_line{
+        display: block;
+    }
+    
+    .home_logo {
+        margin-top: calc(16.66vh/2 - 50px * 3/4);
+    }
      
     
     /* //NOTE fix menu size in tablet */
-    /*.sidebar {
-        font-size: 4.375rem;
-        text-align: -webkit-auto;
-        padding-right: 25px;
-        height: 15vh !important;
-    }*/
     .sidebar-home{
         height: 100vh !important;
         width : 15vw !important;
+    }
+    
+    .home_logo{
+        width : 10vw;
     }
     
     .section > li > a > div,
@@ -1235,6 +1217,7 @@ to implements the scroll vertical */
     .menu-item-align{
         height:  16.666vh !important;
         min-height:  16.666vh !important;
+        min-width: 15vw !important;
     }
     
     /* NOTE: fix to tablet size */
@@ -1243,41 +1226,20 @@ to implements the scroll vertical */
        margin-top:  43px !important
     }
     
-    #password ,
-    .email,
-    .btn-continue{
-	   font-size: 4vw;
+    .selected{
+        left: calc(100% - 6px) !important;
     }
     
-    .item-row{
-        /*height: 26.66vh !important;
-        max-height: 26.66vh !important;*/
-        background-color: white !important;
-    }
-    
-    .item-last{
-        background-color: #f5f5f5 !important;
-    }
-    
-    .item-row-cpf{
-        /* height: 40vh !important;
-        max-height: 40vh !important;*/
-    }
-    
-    .email-name{
-      position: absolute !important;
-      margin-top: 5vh;
-    }
     
     .menu-item-text{
-        font-size: 10px;
+        /* font-size: 10px; */
     }
     
     
     .custom-li,
     .custom-li:before
     {
-        font-size: 15px !important;
+        /* font-size: 15px !important; */
         font-weight: 900;
     }
     
@@ -1291,51 +1253,26 @@ to implements the scroll vertical */
     .help > .fp-tableCell > .wrap > .content > ol > .item > .collapsing,
     .help > .fp-tableCell > .wrap > .content > ol > .item > .collapse.in
     {
-        width: auto;
-        font-size: 14px !important;
+        width: 100% !important;
+        /* font-size: 14px !important; */
     }
+    
     
     #fullpage{
         padding-left: 7vw !important;
-    }
-
-    
-    /*.selected{
-        min-width: 25vw !important;
-        max-width: 25vw !important;
-        height: 6px !important;
-        min-height: 6px !important;
-        max-height: 6px !important;
-        background-size: 100% 6px !important; 
+        width: 70vw;
     }
     
-     #fullpage{
-        overflow: scroll !important;
-        float: left !important;
-        height: 70vh !important;
-        width: 100vw;
-        display: flex;
-        margin-left: 0px !important;
-        padding-left:  0px !important;
-        overflow: hidden !important;
+    .text_container_help{
+        width: 40vw;
+        float: right;
+        clear: right;
     }
     
-    #fullpage > .section {
-        height: 70vh !important;
-        min-width: 100vw !important;
-        flex-grow: 1 !important;
-        padding-left:  98px !important;
-        overflow: hidden !important;
+    .content{
+        width: 60vw !important;
+        /* padding-right:  70px !important; */
     }
-    
-    .fp-tableCell{
-        height: 70vh !important;
-        width: 100% !important;
-        min-width: 100% !important;
-        max-width: 100% !important;
-        padding-right: 15vw !important;
-        overflow: hidden !important;
-    }*/
     
 }
 
@@ -1343,25 +1280,49 @@ to implements the scroll vertical */
 /* this is the same that col-md on bootstrap */
 @media screen and (max-width: 767px) {
     
+    .exclamation{
+        top: 0%;
+    }
+    
+    
+    .link_after > a{
+        font-size: 16px;
+    }
+    
+    .break_line{
+        display: none;
+    }
+    
+    .exit_text{
+        position: relative !important;
+        top: 0px !important; 
+        margin-bottom: 0px !important;
+        float: right;
+        clear: right;
+        text-align: right;
+        margin-right: 10%;
+    }
+    
+    body{
+        letter-spacing: -0.3px !important;
+    }
+    
+    .content{
+        font-size: 16px !important;
+    }
+    
+    #fullpage > .section > .content > p ,
+    #fullpage > .section > .fp-tableCell > .content > p{
+        line-height: 21px !important;
+        margin-bottom: 21px;
+    }
     
     /* the sidebar menu */
     .sidebar{
         display: flex;
         align-items: center;
-        height: 7vh;
-        max-height: 7vh !important;
     }
     
-    /* fix the menu size in tablet */
-    .sidebar-home{
-        /* height: 7vh !important; */
-    }
-    
-    /* the logo img */
-    .img-mask{
-        height: 5vh;
-        margin: 0 0 0 1.25rem !important;
-    }
     
     
      /* text in sidebar */
@@ -1372,98 +1333,12 @@ to implements the scroll vertical */
         float: right;
         text-align: right;
         font-size: 2vh;
-        letter-spacing: -0.5px;
+        letter-spacing: -0.3px;
         margin-right: 1.3125rem !important;
         box-sizing: border-box;
         line-height: normal;
     }
     
-    /* each line */
-    .item-row{
-        height: 31vh;
-        max-height: 31vh;
-        background-color: white !important;
-    }
-    
-    .item-last{
-        background-color: #f5f5f5 !important;
-    }
-    
-    .email-name{
-      position: absolute !important;
-      margin-top: 5vh;
-      margin-left: 31px !important;
-    }
-    
-    
-    /* the email input */
-    .email{
-        font-size: 18px;
-        letter-spacing: -0.9px;
-        margin-left: 31px !important;
-    }
-    
-    /* the password input and the button continue*/
-    .password, .btn-continue{
-      font-size: 21px;
-      letter-spacing: -1px;
-      margin-left: 31px !important;
-    }
-    
-    /* change placeholder for input */
-    ::-webkit-input-placeholder,
-    :-moz-placeholder, /* Firefox 18- */
-    ::-moz-placeholder,  /* Firefox 19+ */
-    :-ms-input-placeholder
-    {
-      font-size: 21px !important;
-    }
-
-    
-    .password-after , .error-message , .cpf-after{
-        font-size: 12px;
-        margin-left: 31px !important;
-        margin-top: 5vh !important;
-    }
-    
-    .cpf-after{
-        margin-top: -40vh !important;
-    }
-    
-    .loading-container, .visible{
-        margin-left: 31px !important;
-    }
-    
-    
-    /* eye checkbox */
-    label{
-        font-size: 14px !important;
-    }
-    
-    .eye_style{
-        display: block;
-    }
-    
-    input[type="checkbox"] + label {
-        display: none;
-    }
-    
-    input[type="checkbox"]:hover + label {
-        display: none !important;
-    }
-    
-    label{
-        display: none;
-    }
-    
-    /* show eye input check box */
-    input[type="checkbox"].eye_style + label,
-    input[type="checkbox"].eye_style:active + label ,
-    input[type="checkbox"].eye_style:checked + label,
-    input[type="checkbox"].eye_style:hover + label
-    {
-        display: block !important;
-    }
     
     /* fix margin issue */
     .margin-right{
@@ -1473,54 +1348,28 @@ to implements the scroll vertical */
         margin-right: 0px;
     }
     
-    /* popover */
-    .popover{
-        background-color: white !important;
-        width: 85vw !important;
-        max-width: 85vw !important;
-        height: 32px !important;
-        font-size: 12px !important;
-        padding-left: 0px !important;
-        border-left-width: 0px !important;
-        border-right-width: 0px !important;
-        border-bottom-width: 0px !important;
-        left: 31px !important;
-    }
-
-    .popover-content{
-        width: 85vw !important;
-        max-width: 85vw !important;
-        height: 32px !important;
-    }
-
-    .popover > .arrow {
-        border-width: 0px !important;
-    }
-    
     /* home */
     .menu-item-text{
         font-size: 10px;
     }
     
     .menu-img{
-        width: 10vw;
-        height: 10vh;    
+        width: 24px;
+        height: 24px;    
     }
     
     .sidebar-home{
-        height: 15vh;
-        max-height: 15vh !important;
         display: flex;
         align-items: center;
     }
     
     .home_logo{
         margin: 2% auto auto 10% !important;
-        max-height: 15vw !important;
-        min-height: 15vw !important;
-        max-width: 30vw !important;
-        min-width: auto !important;
-        width: auto !important;
+        width: 89.4px;
+        height: 40.5px;
+        object-fit: contain;
+        max-height: 100%;
+        max-width: 100%;
     }
     
     #fullpage > .section {
@@ -1530,8 +1379,9 @@ to implements the scroll vertical */
         max-width: 100% !important;
         /* float: left !important; */
         flex-grow: 1 !important; /* to align side by side item */
-        padding-left:  15vw !important;
-        margin-right: 15vw !important;
+        padding-top: 39px;
+        padding-left:  40px !important;
+        padding-right: 40px !important;
         table-layout: auto;
     }
     
@@ -1540,44 +1390,47 @@ to implements the scroll vertical */
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
-        padding-right: 15vw !important;
+        /* padding-right: 15vw !important; */
     }
     
-    .section-menu , 
+    .section-menu{
+        padding-right: 0px;
+    }
+     
     .item-align, 
     .menu-item, 
     .menu-item-align,
     .section-menu > li {
-        height: 15vh !important;
-        max-height: 15vh !important;
-        min-width:  30vw !important;
-        max-width:  30vw !important;
+        height: 72px;
+        max-height: 72px;
+        min-width:  90px;
+        max-width:  90px;
     }
     
     .selected{
-        width: 25vw;
-        min-width: 30vw !important;
-        max-width: 30vw !important;
+        min-width: 90px;
+        max-width: 90px;
         height: 6px !important;
         min-height: 6px !important;
         max-height: 6px !important;
-        background-size: 30vw 6px !important; 
+        background-size: 90px 6px ; 
     }
     
     .exit_text{
-        font-size: 5vw;
+        font-size:14px;
     }
     
     /* each page */
     .start > .title,
     .start > .fp-tableCell > .title{
         margin-top : 0 !important;
-        font-size: 28px !important;
+        font-size: 28px;
         font-weight: bold !important;
+        letter-spacing: -0.3px !important;
     }
 
     .help > .fp-tableCell > .wrap{
-        width: 100vw;
+        overflow-y: scroll !important;
     }
 
     .telephone > .title,
@@ -1594,17 +1447,11 @@ to implements the scroll vertical */
     .help > .fp-tableCell > .wrap > .title
     {
         margin-top : 0 !important;
-        font-size: 21px !important;
+        font-size: 21px;
         font-weight: bold !important;
-        letter-spacing: -0.1px;
+        letter-spacing: -0.3px;
     }
     
-    .help > .title,
-    .help > .fp-tableCell > .title,
-    .help > .fp-tableCell > .wrap > .title
-    {
-        margin-top: 39px !important;
-    }
     
     .start > .content,
     .start > .fp-tableCell > .content,
@@ -1627,46 +1474,82 @@ to implements the scroll vertical */
     .recharge > .fp-tableCell > .footer,
     .help > .footer, 
     .help > .fp-tableCell > .footer ,
-    .help > .fp-tableCell > .wrap >  .footer
+    .help > .fp-tableCell > .wrap >  .footer,
+    .wifi > .footer, 
+    .wifi > .fp-tableCell > .footer, 
+    .wifi > .fp-tableCell > .wrap > .footer, 
+    .oiplay > .footer, .recharge > .footer,
+    .oiplay > .fp-tableCell > .footer,
+    .recharge > .fp-tableCell > .footer
     {
-        font-size: 14px !important;
-        margin: 13px 0px 0 0px !important;
+        font-size: 14px;
+        margin: 5vh 0px 5vh 0px !important;
         line-height: 20px !important;
-        width: 80vw !important;
+        width: inherit !important;
+        word-wrap: break-word;
+        padding-right: 0px;
+    }
+    
+    .wifi > .fp-tableCell > .wrap > .footer > p{
+        font-size: 14px;
+        line-height: 20px !important;
+        width: inherit !important;
+        word-wrap: break-word;
+        padding-right: 0px;
+    }
+    
+    .footer > p{
+        font-size: 14px;
+        width: inherit;
     }
     
     /* Fix the mobile content size */
     .help > .fp-tableCell > .wrap > .content{
         height: 100% !important;
+        width: 100% !important;
     }
     
     .custom-li:before{
         font-size: 16px;
         line-height: 18px;
-        letter-spacing: -0.5;
+        letter-spacing: -0.3px;
         margin-right: 9px;
         margin-left: 0px;
     }
     .custom-li {
         font-size: 16px;
         line-height: 18px;
-        letter-spacing: -0.5;
-        width : 50vw;
+        letter-spacing: -0.3px;
     }
 
     /* item */
     .help > .content > ol > .item,
     .help > .fp-tableCell > .content > ol > .item,
     .help > .fp-tableCell > .wrap > .content > ol > .item{
-        border-top: solid 1px #dddddd;
+        /* border-top: solid 1px #dddddd; */
         border-bottom: solid 1px #dddddd;
-        padding-top: 33px;
-        padding-bottom: 33px;
+        padding-top: 14px;
+        padding-bottom: 14px;
         margin-right: 0px;
-        width: 70vw !important;
+        /* width: 70vw !important; */
     }
     
+    .help > .fp-tableCell > .wrap > .content > ol > .item:first-child{
+        border-top: solid 1px #dddddd;
+    }
+    
+    /* ul content */
+    ul > li{
+        font-size: 14px;
+    }
+    
+    .item > div > p{
+        padding-right: 22.5px;
+    }
+    
+    
     /* internal intent content, inside collapse */
+    .help > .content > ol > .item,
     .help > .content > ol > .item > .collapse,
     .help > .content > ol > .item > .collapsing,
     .help > .content > ol > .item > .collapse.in,
@@ -1677,8 +1560,22 @@ to implements the scroll vertical */
     .help > .fp-tableCell > .wrap> .content > ol > .item > .collapsing,
     .help > .fp-tableCell > .wrap> .content > ol > .item > .collapse.in
     {
-        width: 50vw;
-        font-size: 12px;
+        width: 70vw;
+        font-size: 14px;
+        margin-left: 5px;
+        padding-right: 0px;
+        letter-spacing: -0.3px;
+    }
+    
+    /* the arrow */
+    .img_container_help,
+    .img_container_help_down
+    {
+        /* width: 3vw;
+        height: 6vh;*/
+        background-size: 3.7vw;
+        background-repeat: no-repeat;
+        background-position: -0.3vw 0px;
     }
     
     /* active scroll vertical */
@@ -1699,103 +1596,93 @@ to implements the scroll vertical */
     .help > .fp-tableCell > .wrap >  .footer{
         height: auto !important;
         display: inline-block;
-        width: 70vw !important;
+        word-wrap: break-word;
     }
     
     .telephone > .btn_installation,
-    .telephone > .fp-tableCell > .btn_installation{
-      width : 70vw;
+    .telephone > .fp-tableCell > .btn_installation,
+    {
+      width : inherit;
       height: 70px;
       
+    }
+    
+    .btn_start{
+        width: inherit;
+    }
+    
+    
+    .help > .title,
+    .help > .fp-tableCell > .title,
+    .help > .fp-tableCell > .wrap > .title{
+        margin-bottom: 21px;
     }
 
     .wifi > .btn_connection,
     .wifi > .fp-tableCell > .btn_connection,
     .wifi > .fp-tableCell > .wrap > .btn_connection{
-      width : 70vw;
+      width : 100%;
       height: 70px;
+      margin-bottom: 0px;
     }
 
     .oiplay > .btn_oiplay ,
     .recharge > .btn_recharge,
     .oiplay > .fp-tableCell > .btn_oiplay ,
     .recharge > .fp-tableCell > .btn_recharge{
-      width : 70vw;
+      width : inherit;
       height: 70px;
+      margin-bottom: 0px;
     }
     
-    .help > .footer,
-    .help > .fp-tableCell > .footer,
-    .help > .fp-tableCell > .wrap > .footer{
-        margin-bottom: 300px !important;
-    }
-}
-
-/* to manage the checkbox position */
-@media screen and (min-width: 1500px){
-    .padding-right{
-        width : 6vw !important;
+    .collapse > p,
+    .collapse.in,
+    .collapsing > p,
+    .collapse.in > p{
+        letter-spacing: -0.3px;
+        width: 70vw;
     }
     
-    .sidebar_text{
-        margin-top: 43px !important;
-    }
-}
-
-
-@media screen and (min-width: 1200px) and (max-width: 1499px){
-    .margin-right{
-        width : 4vw !important;
+    .text_container_help{
+        width : 60vw;
+        float: right;
+        clear: right;
     }
     
-    .sidebar_text{
-        margin-top: 43px !important;
-    }
-}
-
-@media screen and (min-width: 1000px) and (max-width: 1199px){
-    .margin-right{
-        width : 5vw !important;
-        margin-right: 70px !important;
+    .space-bottom{
+        margin-bottom: 14px !important;
     }
     
-    /* fix the width on tablet */
-    #fullpage{
-        width: 70vw !important;
-        float: left;
-        clear: both;
+    .popover,
+    .popover > .popover-content{
+        width: 120px !important;
+        font-size: 12px !important;
     }
+    
+    .popover-content{
+        padding: 8px 14px !important;
+    }
+    
 }
 
-@media screen and (min-width: 768px) and (max-width: 999px){
+
+
+@media screen and (min-width: 768px) and (max-width: 990px){
     .margin-right{
         margin-right: 70px !important;
     }
     
     #fullpage{
         width: 70vw;
-        left: 30vw;
-        top: -100vh;
+        padding-right: 90px;
     }
     
-    /*.exit_text{
-        font-size: 10px;
-    }*/
+    .content
+    .content > p{
+        width: 60vw !important;
+        padding-right:  70px !important;
+    }
 }
 
 
-/* change placeholder for input */
-::-webkit-input-placeholder ,
-:-moz-placeholder , /* Firefox 18- */
-::-moz-placeholder, /* Firefox 19+ */
-:-ms-input-placeholder {  
-  font-family: 'SimplonBP-Light';
-  font-size: 42px;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 5.36;
-  letter-spacing: -2px;
-  color: #dddddd;   
-  font-weight: 100 !important;
-}
 

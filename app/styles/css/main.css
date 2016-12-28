@@ -2,17 +2,17 @@
 
 @font-face {
     font-family: 'SimplonBP-Light';
-    src : url("../fonts/Simplon BP/OTF/SimplonBP-Light.otf");
+    src : url("../../fonts/Simplon BP/OTF/SimplonBP-Light.otf");
 }
 
 @font-face {
     font-family: 'SimplonBP-Regular';
-    src : url("../fonts/Simplon BP/OTF/SimplonBP-Regular.otf")
+    src : url("../../fonts/Simplon BP/OTF/SimplonBP-Regular.otf")
 }
 
 @font-face {
     font-family: 'SimplonOi-Headline';
-    src : url("../fonts/Simplon Oi Headline/OTF/SimplonOi-Headline.otf")
+    src : url("../../fonts/Simplon Oi Headline/OTF/SimplonOi-Headline.otf")
 }
 
 body, html {
@@ -29,21 +29,22 @@ body, html {
     left: 40vw;
 }
 
-.row{
-    background-image: linear-gradient(-180deg, #EA288C 0%, #FF6D00 70%);
-    background-image: linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%) !important;
+.ui-input-btn > input,
+.ui-input-btn > div
+{
+    visibility: visible;
 }
 
-.align-items{
-    display: flex;
-    vertical-align: middle;
-    flex-direction: row;
-    flex-flow: inherit;
-    flex-wrap: nowrap;
-    flex: 1;
-    align-self: center;
-    align-items: center;
+/* hidden the mobile plain text button */
+.ui-input-btn{
+    visibility: hidden;
 }
+
+/*.side-bar-after-effect{
+    max-width: 15vh !important;
+}*/
+
+/* END Test */
 
 
 .container-fluid{
@@ -65,14 +66,363 @@ body, html {
     margin-top: 60px
 }
 
+/* text on side bar */
+.sidebar_text {
+  margin-left: 50px;
+  width: 266px;
+  height: 126px;
+  font-family: 'SimplonOi-Headline';
+  font-size: 70px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 0.9;
+  letter-spacing: -4px;
+  color: #ffffff;
+}
+
+.item-row{
+    height: 33.33vh !important;
+    margin-left: 0px !important;
+    border: solid 1px #dddddd;
+    background-color: white !important;
+}
+
+.item-last{
+  background-color: #f5f5f5 !important;
+}
+
+/* items on cpf page */
+.item-row-cpf{
+    height: 50vh !important;
+    margin-left: 0px !important;
+    border: solid 1px #dddddd;
+    display: flex;
+    align-items: center;
+}
 
 
+
+/* remove the border */
+input {
+  border-width:0px !important;
+  border:none !important;
+}
+
+
+/* below customize checkbox */
+.checkbox-container{
+    vertical-align: middle;
+}
+
+/* align label to checkbox */
+label {
+  display: block;
+  padding-left: 15px;
+  line-height: 19px;
+  text-indent: 15px;
+  margin-right: 70px !important;
+}
+
+
+input[type="checkbox"].without-eye{
+    opacity: 0;
+}
+
+input[type="checkbox"] + label
+{
+    background-color: #fff;
+    border: 0.08rem solid #999999;
+    width: 21px  !important;
+    height: 21px;
+    float: right;
+    display: block;
+    margin-right: 70px !important;
+    background: none;
+}
+
+input[type="checkbox"]:checked + label {
+    content: ' ';
+    width: 21px;
+    height: 21px;
+    background: url(../svg/checkbox_on.svg);
+    background-repeat: no-repeat;
+    border: none;
+    *overflow: hidden;
+    color : #C72177;
+}
+
+
+input[type="checkbox"]:hover + label{
+    border: 0.08rem solid #C72177;
+    display: block;
+}
+
+input[type="checkbox"]:checked:hover + label{
+    border: none;
+}
+
+
+
+
+/* remove outline border */
+input:focus {
+    outline-width: 0;
+}
+
+/* the above email input text */
+.email-name{
+  position: absolute !important;
+  margin-top: 10vh;
+  margin-left: 87px !important;
+  font-family: SimplonBP-Regular;
+  font-size: 14px;
+  font-weight: normal !important;
+  font-style: normal !important;
+  font-stretch: normal !important;
+  letter-spacing: -0.5px;
+  color: #777777;
+}
+
+/* email input */
+/* the password input */
+/* the cpf input */
+.password , .cpf, .email{
+  font-family: 'SimplonBP-Light';
+  font-size: 42px;
+  font-weight: 300;
+  margin-left: 87px !important;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -2px;
+  width: 100%;
+  background-color: white !important;
+}
+
+.email{
+    color: #777777;
+}
+
+.password , .cpf {
+    color: #222222;
+}
+
+.in-cpf-page-text{
+    width: 204px !important;
+}
+/* end */
+
+/* placeholder password after */
+.password-after, .cpf-after{
+    font-family: 'SimplonBP-Light';
+    position: absolute;
+    margin-top: 7vh;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.5px;
+    color: #777777;
+    margin-left: 87px !important;
+}
+
+/* placeholder password after */
+.cpf-after{
+    margin-top: -35vh !important;
+    margin-left: 87px !important;
+    z-index: 100;
+}
+
+/* error message */
+.error-message{
+    position: absolute;
+    margin-top: 7vh;
+    font-size: 14px;
+    font-weight: normal;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.5px;
+    color: #ff0000;
+    margin-left: 87px !important;
+}
+
+.float-right{
+    text-align: right;
+    display: block;
+    float: right !important;
+    clear: right !important;
+    width: 100%;
+}
+
+.margin-right{
+    margin-right: 76px !important;
+    width: 4vw !important;
+    float: right !important;
+    clear: right !important;
+}
+
+/* the button continue */
+.btn-continue, .loading{
+  margin-left: 87px !important;
+  font-family: SimplonBP-Light;
+  font-size: 42px;
+  font-weight: 300;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -2px;
+  color: #cccccc;
+}
+
+/* cpf img */
+.loading, .sucess_img , .error_img{
+    background-repeat: no-repeat;
+    margin: 0px !important;
+}
+
+.error_cpf{
+    display: none;
+}
+
+/*.sucess_cpf, .error_cpf{
+    display: flex;
+    align-items: center;
+}*/
+
+.sucess_text, .error_txt{
+    margin-right: 14px;
+    font-family: 'SimplonBP-Light' !important;
+    font-size: 21px;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: -0.7px;
+    color: #4a4a4a;
+}
+
+
+/* container to img loading */
+.loading-container{
+    margin-left: 87px !important;
+}
+
+/* text on cpf page */
+.know_cpf ,
+.sucess_text ,
+.error_text{
+  font-family: 'SimplonBP-Light';
+  padding-left: 0px !important;
+  font-size: 21px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 1.33;
+  letter-spacing: -0.7px;
+  color: #4a4a4a;
+}
+
+.sucess_text ,
+.error_text,
+.know_cpf.visible{ /* fix the margin error */
+   margin-left: 15px !important;
+}
+
+.know_cpf,
+.sucess_cpf,
+.error_cpf,
+.loading-container{
+   display: none;
+}
+
+.visible{
+   display: flex !important;
+   align-items: center;
+   margin-left: 87px !important;
+}
+
+.invisible{
+    display: none !important;
+}
+
+.btn-continue:active{
+  color: #e03d6f;
+}
+
+
+/* eye input checkbox */
+input[type="checkbox"].eye_style{
+    display: none;
+    border: none;
+    border-width: 0px;
+}
+
+input[type="checkbox"].eye_style + label{
+    display: none;
+    width: 26px !important;
+    height: 26px;
+    background-image: url(../svg/eye_unchecked.svg);
+    background-repeat: no-repeat;
+    border: none;
+    border-width: 0px;
+    margin: 0px !important;
+}
+
+input[type="checkbox"].eye_style:active + label,
+input[type="checkbox"].eye_style:checked + label{
+    display: none;
+    width: 26px !important;
+    opacity: 1;
+    background-image: url(../svg/eye_svg.svg);
+    background-repeat: no-repeat;
+}
+
+input[type="checkbox"].eye_style:hover{
+    display: none;
+    width: 26px !important;
+    opacity: 1;
+    border: none;
+    border-width: 0px;
+    background-image: url(../svg/eye_svg.svg) !important;
+    background-repeat: no-repeat !important;;
+}
 
 /* center child items on screen */
 .vertical-align-items{
     height: 100% !important;
 }
 
+
+/* arrow "Entrar" button */
+.arrow-continue{
+    float: right;
+    vertical-align: middle;
+    background: url(../svg/next.svg);
+    background-repeat: no-repeat;
+    width: 10px;
+    height: 23px;
+    border: 0 !important;
+    border-width: 0px !important;
+    outline: none !important;
+}
+
+
+.img-container{
+    display: inline-block !important;;
+    float: right !important;
+    clear: right !important;;
+    width: 100%;
+    margin-right: 70px;
+}
+
+
+.text-show{
+  font-family: SimplonBP-Light;
+  font-size: 21px;
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: normal;
+  letter-spacing: -0.6px;
+  color: #dddddd;
+  margin-right: 76px !important;
+}
 
 
 
@@ -88,6 +438,34 @@ body, html {
     padding-left: 0px !important;
 }
 
+/* popover */
+.popover{
+    background-color: white !important;
+    width: 364px !important;
+    max-width: 364px !important;
+    height: 50px !important;
+    color: #222222 !important;
+    font-size: 14px !important;
+    padding-left 7px !important;
+    font-family: 'SimplonBP-Regular' !important;
+    border: #dbdbdb solid 2px !important;
+    border-radius: 2px !important;
+    -webkit-box-shadow: 0 0 0 white !important;
+    box-shadow: 0 0 0 white !important;
+    left: 87px !important;
+}
+
+.popover-content{
+    width: 364px !important;
+    max-width: 364px !important;
+    height: 50px !important;
+}
+
+.popover > .arrow {
+    top: -21px !important;
+    left: 11% !important;
+    border-width: 10px !important;
+}
 
 
 
@@ -116,16 +494,12 @@ body, html {
     height : auto !important;
 }
 
-.sidebar-home{
-    text-align: left;
-}
-
 
 .home_logo{
     margin-left: 36px;
-    margin-top: 70px;
-    max-height: 62.5px;
-    min-height: 62.5px;
+    margin-top: 60px;
+    max-width: 10vw !important;
+    min-width: 10vw !important;
 }
 
 .img_container{
@@ -154,7 +528,7 @@ body, html {
 }
 
 .exit_text{
-  position: absolute !important;
+  position: absolute;
   top: 90vh;
   width: 31px;
   height: 21px;
@@ -163,10 +537,10 @@ body, html {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.8px;
   color: #ffffff;
+  margin-left: 31px;
   margin-bottom: 60px !important;
-  margin-left: 36px;
 }
 
 .scrollable-menu {
@@ -176,8 +550,8 @@ body, html {
 }
 
 /* hide the scroll bar */
-::-webkit-scrollbar { 
-    display: none; 
+::-webkit-scrollbar {
+    display: none;
 }
 
 .section-menu{
@@ -187,7 +561,6 @@ body, html {
 .menu-item{
     border-bottom: solid 2px #dddddd;
     min-height: 25vh;
-    min-height: 210px;
     position: relative !important;
     /* display: flex; */
     /*align-items: center;*/
@@ -200,12 +573,12 @@ body, html {
     position: absolute;
     top: 0;
     left: calc(100% - 6px);
-    min-height: 210px;
+    min-height: 25vh;
     background-image:
       linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%);
-    background-size: 6px 100%;
-    background-position: 0 0, 100% 0; 
-    background-repeat: no-repeat; 
+    background-size: 6px 100% !important;
+    background-position: 0 0, 100% 0;
+    background-repeat: no-repeat;
     min-width: 6px ;
     background-color: transparent;
     z-index: 1000;
@@ -214,7 +587,7 @@ body, html {
 .menu-item-align{
     display: table-cell;
     vertical-align: middle;
-    height: 210px;
+    height: 25vh;
     /* width: 100% !important; */
     min-width: 17vw !important;
     margin-left: auto !important;
@@ -232,7 +605,7 @@ body, html {
     font-style: normal;
     font-stretch: normal;
     line-height: 1.5;
-    letter-spacing: -0.75px;
+    letter-spacing: -0.6px;
     text-align: center;
     color: #999999;
 }
@@ -261,28 +634,27 @@ body, html {
 
 #fullpage > .section > .content > p ,
 #fullpage > .section > .fp-tableCell > .content > p{
-    margin-bottom: 5vh;
+    margin-bottom: 5vh !important;
 }
 
 
-/* start */                  
+/* start */
 .start > .title,
 .start > .fp-tableCell > .title{
-    font-family: 'SimplonBP-Regular';
     font-size: 63px;
     font-weight: 300;
     line-height: 1.11;
-    letter-spacing: -0.75px;
+    letter-spacing: -2.2px;
 }
 
 .start > .content,
 .start > .fp-tableCell > .content{
-    width: 700px;
+    width: 60vw;
     padding-right: 4vw;
     margin-top: 38px;
     font-size: 28px;
     line-height: 1.5;
-    letter-spacing: -0.75px;
+    letter-spacing: -0.6px;
 }
 
 /* phone */
@@ -293,23 +665,21 @@ body, html {
 
 .telephone > .title,
 .telephone > .fp-tableCell > .title{
-  font-family: 'SimplonBP-Regular';
-  font-weight: 300;
   font-size: 42px;
-  letter-spacing: -0.75px;
-  color: #222222; 
+  letter-spacing: -1.5px;
+  color: #222222;
   margin-bottom: 32px;
 }
 
 
 .telephone > .content,
 .telephone > .fp-tableCell > .content{
-  width: 700px;
+  width: 60vw !important;
   padding-right: 4vw;
   font-size: 28px;
   font-weight: 300;
   line-height: 1.25;
-  letter-spacing: -0.75px;
+  letter-spacing: -1.1px;
   color: #222222;
 }
 
@@ -324,7 +694,7 @@ body, html {
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.5px;
   text-align: center;
   color: #e03d6f;
 }
@@ -335,10 +705,8 @@ body, html {
 .wifi > .title,
 .wifi > .fp-tableCell > .title,
 .wifi > .fp-tableCell > .wrap > .title{
-  font-family: 'SimplonBP-Regular';
-  font-weight: 300;
   font-size: 42px;
-  letter-spacing: -0.75px;
+  letter-spacing: -1.5px;
   color: #222222;
   margin-bottom: 36px;
 }
@@ -347,11 +715,11 @@ body, html {
 .wifi > .content,
 .wifi > .fp-tableCell > .content,
 .wifi > .fp-tableCell > .wrap > .content{
-  width: 700px;
+  width: 60vw !important;
   padding-right: 4vw;
   font-size: 28px;
   line-height: 1.25;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.5px;
   color: #222222;
 }
 
@@ -364,7 +732,7 @@ body, html {
   background-color: #ffffff;
   border: solid 1px #e03d6f;
   font-size: 21px;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.5px;
   text-align: center;
   color: #e03d6f;
   margin-bottom: 20px;
@@ -372,13 +740,12 @@ body, html {
 
 .wifi > .footer,
 .wifi > .fp-tableCell > .footer,
-.wifi > .fp-tableCell > .wrap > .footer,
-.wifi > .fp-tableCell > .wrap > .footer > p
+.wifi > .fp-tableCell > .wrap > .footer
 {
-  width : 700px;
+  width : 60vw;
   font-size: 21px;
   line-height: 1.43;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.8px;
   color: #222222;
   padding-right: 4vw;
 }
@@ -389,31 +756,29 @@ body, html {
 
 /* oiplay and recharge */
 
-.oiplay > .title , 
+.oiplay > .title ,
 .recharge > .title ,
-.oiplay > .fp-tableCell > .title , 
-.recharge > .fp-tableCell > .title 
+.oiplay > .fp-tableCell > .title ,
+.recharge > .fp-tableCell > .title
 {
-  font-family: 'SimplonBP-Regular';
-  font-weight: 300;
   font-size: 42px;
-  letter-spacing: -0.75px;
+  letter-spacing: -1.5px;
   color: #222222;
   margin-bottom: 36px;
   max-height: 100vh !important;
 }
 
-.oiplay > .content , 
-.oiplay > .fp-tableCell > .content , 
+.oiplay > .content ,
+.oiplay > .fp-tableCell > .content ,
 .recharge > .content ,
 .recharge > .fp-tableCell > .content{
-  width: 700px;
+  width: 60vw;
   padding-right: 4vw;
   font-size: 28px;
   font-style: normal;
   font-stretch: normal;
   line-height: 1.25;
-  letter-spacing: -0.75px;
+  letter-spacing: -1.1px;
   color: #222222;
 }
 
@@ -425,7 +790,7 @@ body, html {
   height: 70px;
   border-radius: 3px;
   font-size: 21px;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.5px;
   background-color: #ffffff;
   border: solid 1px #e03d6f;
   text-align: center;
@@ -439,7 +804,7 @@ body, html {
 .recharge > .fp-tableCell > .footer{
   font-size: 21px !important;
   line-height: 1.43;
-  letter-spacing: -0.75px;
+  letter-spacing: -0.8px;
   color: #222222;
   padding-right: 4vw;
 }
@@ -457,11 +822,9 @@ body, html {
 .help > .title,
 .help > .fp-tableCell > .title,
 .help > .fp-tableCell > .wrap > .title{
-  font-family: 'SimplonBP-Regular';
-  font-weight: 300;
   margin-top: 76px;
   font-size: 42px;
-  letter-spacing: -0.75px;
+  letter-spacing: -1.5px;
   color: #222222;
   margin-bottom: 42px;
 }
@@ -469,7 +832,7 @@ body, html {
 /* custom li */
 .help > .content > ol ,
 .help > .fp-tableCell > .content > ol,
-.help > .fp-tableCell > .wrap > .content > ol{ 
+.help > .fp-tableCell > .wrap > .content > ol{
     counter-reset: item;
     padding-left: 0px;
 }
@@ -479,7 +842,7 @@ ol div li { display: block; }
 .custom-li:before{
     font-size: 28px;
     line-height: 1.25;
-    letter-spacing: -0.75px;
+    letter-spacing: -1.1px;
     color: #777777;
     content: counter(item) ". ";
     counter-increment: item;
@@ -489,48 +852,10 @@ ol div li { display: block; }
 .custom-li {
     font-size: 28px;
     line-height: 1.25;
-    letter-spacing: -0.75px;
+    letter-spacing: -1.1px;
     color: #222222;
     margin-left: 0px !important;
     padding-left: 0px !important;
-}
-
-.collapse,
-.collapsing,
-.collapse.in
-{
-    padding-left: 14px !important;
-}
-
-ul{
-    display: inline-block !important;
-}
-
-ul > li{
-  width: 640px;
-  font-family: 'SimplonBP-Light';
-  font-size: 18px;
-  font-weight: 100;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: -0.75px;
-  color: #222222;
-}
-
-.item{
-    cursor: pointer;
-}
-
-.item > div > ul {
-    padding-left: 0px !important;
-    margin-bottom: 14px;
-    margin-top: 14px;
-}
-
-ul > li:before{
-    content : '•' !important;
-    padding-right: 12px;
 }
 
 /* item */
@@ -545,14 +870,15 @@ ul > li:before{
 }
 
 
-/* create a wrap for the content 
-for setting the max height to the content 
+/* create a wrap for the content
+for setting the max height to the content
 to implements the scroll vertical */
 /* make the content completaly scrollable in y direction */
 .help > .fp-tableCell > .wrap{
     height: 100vh ;
     max-height: 100vh !important;
     overflow-y: scroll !important;
+    width: 60vw;
 }
 
 
@@ -568,22 +894,15 @@ to implements the scroll vertical */
 .help > .fp-tableCell > .wrap > .content > ol > .item > .collapsing,
 .help > .fp-tableCell > .wrap > .content > ol > .item > .collapse.in
 {
-    width: 700px;
+    width: 60vw;
     padding-right: 4vw;
     font-size: 18px;
     line-height: 1.33;
-    letter-spacing: -0.75px;
+    letter-spacing: -0.2px;
     color: #222222;
     margin-left: 38px;
     margin-top: 14px;
-    
-}
-
-/* change the cursor to pointer or hand */
-.help > .fp-tableCell > .wrap > .content > ol > .item > li
-{
-    cursor: hand;
-    cursor: pointer;
+    margin-bottom: 42px;
 }
 
 .help > .footer,
@@ -591,32 +910,17 @@ to implements the scroll vertical */
 .help > .fp-tableCell > .wrap > .footer{
   font-size: 28px;
   line-height: 1.25;
-  letter-spacing: -0.75px;
+  letter-spacing: -1.1px;
   color: #222222;
   margin-top: 67px;
   margin-bottom: 99px !important;
   padding-right: 4vw;
 }
 
-i{
-    font-weight: 300;
-}
-
 .help > .footer > span,
 .help > .fp-tableCell > .footer > span,
-.help > .fp-tableCell > .wrap > .footer > span,
-div > p > a{
-    color: #e03d6f !important;
-}
-
-a:active,
-a:hover
-{
-    text-decoration: none !important;
-}
-
-p >  a{
-    text-decoration: underline !important;
+.help > .fp-tableCell > .wrap > .footer > span{
+    color: #e03d6f;
 }
 
 .help_item_center,
@@ -624,20 +928,8 @@ p >  a{
     height: 100%;
 }
 
-
-
 /* help center float content and show background img */
-.img_container_help{
-    height: 10px;
-    width: 23px;
-    text-align: right;
-    margin-left: auto;
-    float: right;
-    clear: right;
-     background-image: url(../svg/arrow_down.svg) !important
-}
-
-.img_container_help_down{
+.arrow_item_help + .img_container_help{
     height: 10px;
     width: 23px;
     text-align: right;
@@ -645,6 +937,16 @@ p >  a{
     float: right;
     clear: right;
     background-image: url(../svg/arrow_up.svg)
+}
+
+.arrow_item_help.collapsed + .img_container_help{
+    height: 10px;
+    width: 23px;
+    text-align: right;
+    margin-left: auto;
+    float: right;
+    clear: right;
+    background-image: url(../svg/arrow_down.svg) !important
 }
 
 
@@ -720,8 +1022,6 @@ p >  a{
 }
 
 .confirmation > .title{
-  font-family: 'SimplonBP-Regular';
-  font-weight: 300;
   font-size: 63px;
   font-weight: normal;
   font-style: normal;
@@ -763,7 +1063,7 @@ p >  a{
 .btn_confirmation:active  .confirmation_img
 {
     background-image: url(../svg/confirmation_active.svg) !important;
-    color: #ffffff;
+    color: #ffffff
 }
 
 .confirmation_img_container{
@@ -778,116 +1078,59 @@ p >  a{
     margin-right: 30px;
 }
 
-/* the external content */
-.external-content{
-    height: 90vh;
-    min-height: 90vh;
-    max-height: 90vh;
-    width: 100vw;
-    overflow-y: scroll;
-}
-
-.text_container_help{
-    float: right;
-    clear: right;
-}
-
-.break_line{
-    display: none;
-}
-
 /* home screen */
 /* I had to modify this to resize on table size */
 /* before the max-width was 1200px */
-/* before it is 768px */
-/* @media (max-width: 767px){ */
-@media (max-width: 413px){
-    
+@media (max-width: 767px){
+
     .sidebar-home{
-        height: 70px !important; /* fix auto resize mobile */
+        height: 30vh !important;
     }
-    
+
     .scrollable-menu{
         overflow-x: scroll !important;
         overflow-y: hidden !important;
     }
-    
-    .title{
-        font-size: 24px;
-        margin-bottom: 0px !important;
-    }
-    
-    .title,
-    .p,
-    .content,
-    .footer,
-    button{
-        line-height: 21px;
-    }
-    
-    .p,
-    .content,
-    .footer{
-        font-size: 16px;
-    }
-    
-    .scrollable-menu , 
-    #navbar-dashboard , 
+
+    .scrollable-menu ,
+    #navbar-dashboard ,
     .nav.nav-tabs.nav-stacked,
     #navbar-dashboard > ul,
     #navbar-dashboard > ul > .section
     {
-        max-height: 72px !important; /* fix auto resize mobile */
-        min-width: 100vw !important;
+        width: auto !important;
+        max-height: 15vh !important;
         max-width: 100vw !important;
         display: flex;
     }
-    
+
     .menu-item{
-        min-height: 72px !important;
-        max-height: 72px !important;
-        max-width: 89px !important;
+        min-height: 15vh !important;
+        max-height: 15vh !important;
+        max-width: 25vw !important;
         float: left;
         border-bottom: none;
-        border-right: solid 2px #dddddd;
+        border-left: solid 2px #dddddd;
     }
-    
-    .menu-item-text > span{
-        color: #999999 !important;
-    }
-    
-    .help > .menu-item{
-        border-right: none;
-    }
-    
+
     .menu-item-align{
         display: table-cell;
         vertical-align: middle;
-        /* height: 15vh !important;
+        height: 15vh !important;
         min-width: 25vw !important;
-        max-width: 25vw !important; */
-        min-height: 72px !important;
-        max-height: 72px !important;
-        max-width: 89px !important;
-        min-width: 89px !important;
+        max-width: 25vw !important;
         margin-left: auto !important;
         margin-right: auto !important;
         flex-grow: 1 !important;
     }
-    
-    #fullpage > .section ,
-    #fullpage > .section > .fp-tableCell{
-        display: block !important;
-    }
-    
+
     #navbar-dashboard > ul > .section > li{
-        font-size: 10px;
-        min-height: 72px !important;
-        max-height: 72px !important;
-        max-width: 89px !important;
+        min-height: 15vh !important;
+        max-height: 15vh !important;
+        max-width: 25vw !important;
         float: left;
     }
-    
+
     .selected{
         position: absolute;
         top: calc(100% - 6px) !important;
@@ -896,149 +1139,18 @@ p >  a{
         height: 6px !important;
         background-image:
           linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%);
-        background-size: 100% 6px !important; 
+        background-size: 100% 6px !important;
         background-position: 0 0, 0 0 !important;
-        background-repeat: no-repeat; 
+        background-repeat: no-repeat;
         min-width: 25vw;
         max-width: 25vw ;
         background-color: transparent;
     }
-    
-    
-    #fullpage{
-        display: block;
-        float: left !important;
-        height: calc(100vh - 142px) !important;
-        width: 100vw;
-        display: flex;
-        margin-left: 0px !important;
-        padding-left:  0px !important;
-        overflow-x: hidden !important;
-        overflow-y: hidden !important;
-    }
-    
-    #fullpage > .section {
-        height: calc(100vh - 142px) !important;
-        min-width: 100vw !important;
-        flex-grow: 1 !important;
-        overflow-x: hidden !important;
-        overflow-y: scroll !important;
-    }
-    
-    
-    .exit_text{
-        
-    }
-    
-    .menu-img{
-        width: 24px;
-        height: 24px;
-    }
-    
-}
 
-@media screen and (min-width: 414px) and (max-width: 767px){
-    
-    
-    .sidebar-home{
-        height: 81px ; /* fix auto resize mobile */
-    }
-    
-    .scrollable-menu{
-        overflow-x: scroll !important;
-        overflow-y: hidden !important;
-    }
-    
-    ul,
-    .scrollable-menu , 
-    #navbar-dashboard , 
-    .nav.nav-tabs.nav-stacked,
-    #navbar-dashboard > ul,
-    #navbar-dashboard > ul > .section,
-    .section-menu
-    {
-        width: 100vw;
-        max-height: 81px !important; /* fix auto resize mobile */
-        max-width: 100vw !important;
-        display: flex;
-    }
-    
-    
-    .section-menu > li,
-    .menu-item{
-        min-height: 81px !important;
-        max-height: 81px !important;
-        min-width: 20vw !important;
-        max-width: 20vw !important;
-        float: left;
-        border-bottom: none;
-        border-right: solid 2px #dddddd;
-        border-left: none;
-    }
-    
-    .menu-item-align{
-        display: table-cell;
-        vertical-align: middle;
-        height: 81px !important;
-        min-width: 20vw !important;
-        max-width: 20vw !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        flex-grow: 1 !important;
-    }
-    
-    .title{
-        font-size: 28px !important;
-    }
-    
-    .content{
-        font-size: 16px !important;
-    }
-    
-    .footer,
-    .footer > p{
-        font-size: 16px !important;
-    }
-    
-    button{
-        width: 100% !important;
-        height: 70px !important;
-    }
-    
-    #fullpage > .section ,
-    #fullpage > .section > .fp-tableCell{
-        display: block !important;
-    }
-    
-    #navbar-dashboard > ul > .section > li{
-        font-size: 10px;
-        min-height: 81px !important;
-        max-height: 81px !important;
-        max-width: 20vw !important;
-        float: left;
-    }
-    
-    .selected{
-        position: absolute;
-        top: calc(100% - 6px) !important;
-        left: 0;
-        max-height: 6px !important;
-        height: 6px !important;
-        background-image:
-          linear-gradient(to bottom, #EB2D82, #EF3A67 50%, #F4484C 100%);
-        background-size: 20vw 6px !important; 
-        background-position: 0 0, 0 0 !important;
-        background-repeat: no-repeat; 
-        min-width: 20vw !important;
-        max-width: 20vw  !important;
-        background-color: transparent;
-    }
-    
-    
+
     #fullpage{
-        display: block;
         float: left !important;
-        height: calc(100vh - 151px) !important;
+        height: 70vh !important;
         width: 100vw;
         display: flex;
         margin-left: 0px !important;
@@ -1046,102 +1158,120 @@ p >  a{
         overflow-x: hidden !important;
         overflow-y: hidden !important;
     }
-    
+
     #fullpage > .section {
-        height: calc(100vh - 142px) !important;
+        height: 70vh !important;
         min-width: 100vw !important;
         flex-grow: 1 !important;
         overflow-x: hidden !important;
-        overflow-y: scroll !important;
+        overflow-y: hidden !important;
     }
-    
-    
-    
-    .menu-img{
-        width: 24px;
-        height: 24px;
+
+
+    .exit_text{
+        position: absolute !important;
+        text-align: right;
+        top: 50%;
+        left: 68%;
+        transform: translate(0 , -75%);
+        /* margin-right: 10vw; */
+        margin: 0;
+        float: right;
     }
-    
-    .collapse > p,
-    .collapsing > p,
-    .collapse.in > p,
-    .collapse > ul > li,
-    .collapsing > ul > li,
-    .collapse.in,
-    .collapsing
-    {
-        font-size: 16px;
-        width: 100% !important;
-    }
-    
 }
 
 /* simple max-width query */
 @media ( min-width: 1200px ){
     .sidebar{
-        height: 100vh; 
+        height: 100vh;
     }
-    
+
     /* home */
+    /*.sidebar-home{
+        max-width: 10vw !important;
+        min-width: 10vw !important;
+    }*/
+
+    /* home */
+
+
     .home_logo{
-        max-height: 62.5px !important;
-        min-height: 62.5px !important;
+        max-height: 10vw !important;
+        min-height: 10vw !important;
     }
      /* end home */
-    
+
 
 }
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) and (max-width: 1199px){
-    
-    .break_line{
-        display: block;
-    }
-    
-    .home_logo {
-        margin-top: calc(16.66vh/2 - 50px * 3/4);
-    }
-     
-    
+
+
     /* //NOTE fix menu size in tablet */
+    /*.sidebar {
+        font-size: 4.375rem;
+        text-align: -webkit-auto;
+        padding-right: 25px;
+        height: 15vh !important;
+    }*/
     .sidebar-home{
         height: 100vh !important;
         width : 15vw !important;
     }
-    
-    .home_logo{
-        width : 10vw;
-    }
-    
+
     .section > li > a > div,
     .selected,
     .slide.menu-item,
     .menu-item-align{
         height:  16.666vh !important;
         min-height:  16.666vh !important;
-        min-width: 15vw !important;
     }
-    
+
     /* NOTE: fix to tablet size */
     .sidebar_text, .in-cpf-page-text{
        font-size: 6vw;
        margin-top:  43px !important
     }
-    
-    
-    .menu-item-text{
-        /* font-size: 10px; */
+
+    #password ,
+    .email,
+    .btn-continue{
+	   font-size: 4vw;
     }
-    
-    
+
+    .item-row{
+        /*height: 26.66vh !important;
+        max-height: 26.66vh !important;*/
+        background-color: white !important;
+    }
+
+    .item-last{
+        background-color: #f5f5f5 !important;
+    }
+
+    .item-row-cpf{
+        /* height: 40vh !important;
+        max-height: 40vh !important;*/
+    }
+
+    .email-name{
+      position: absolute !important;
+      margin-top: 5vh;
+    }
+
+    .menu-item-text{
+        font-size: 10px;
+    }
+
+
     .custom-li,
     .custom-li:before
     {
-        /* font-size: 15px !important; */
+        font-size: 15px !important;
         font-weight: 900;
     }
-    
+
     .help > .content > ol > .item > .collapse,
     .help > .content > ol > .item > .collapsing,
     .help > .content > ol > .item > .collapse.in,
@@ -1152,72 +1282,79 @@ p >  a{
     .help > .fp-tableCell > .wrap > .content > ol > .item > .collapsing,
     .help > .fp-tableCell > .wrap > .content > ol > .item > .collapse.in
     {
-        width: 100% !important;
-        /* font-size: 14px !important; */
+        width: auto;
+        font-size: 14px !important;
     }
-    
-    
+
     #fullpage{
         padding-left: 7vw !important;
-        width: 70vw !important;
     }
-    
-    .text_container_help{
-        width: 40vw;
-        float: right;
-        clear: right;
+
+
+    /*.selected{
+        min-width: 25vw !important;
+        max-width: 25vw !important;
+        height: 6px !important;
+        min-height: 6px !important;
+        max-height: 6px !important;
+        background-size: 100% 6px !important;
     }
-    
-    .content{
-        width: 60vw !important;
-        /* padding-right:  70px !important; */
+
+     #fullpage{
+        overflow: scroll !important;
+        float: left !important;
+        height: 70vh !important;
+        width: 100vw;
+        display: flex;
+        margin-left: 0px !important;
+        padding-left:  0px !important;
+        overflow: hidden !important;
     }
-    
+
+    #fullpage > .section {
+        height: 70vh !important;
+        min-width: 100vw !important;
+        flex-grow: 1 !important;
+        padding-left:  98px !important;
+        overflow: hidden !important;
+    }
+
+    .fp-tableCell{
+        height: 70vh !important;
+        width: 100% !important;
+        min-width: 100% !important;
+        max-width: 100% !important;
+        padding-right: 15vw !important;
+        overflow: hidden !important;
+    }*/
+
 }
 
 /* Responsive: Portrait tablets and up */
 /* this is the same that col-md on bootstrap */
 @media screen and (max-width: 767px) {
-    
-    .break_line{
-        display: none;
-    }
-    
-    .exit_text{
-        position: relative !important;
-        top: 0px !important;
-        width: 0;
-        height: 0; 
-        margin-bottom: 0px !important;
-        margin-left: 0px;
-        float: right;
-        clear: right;
-        text-align: right;
-        margin-right: 10%;
-    }
-    
-    body{
-        letter-spacing: -0.3px !important;
-    }
-    
-    .content{
-        font-size: 16px !important;
-    }
-    
-    #fullpage > .section > .content > p ,
-    #fullpage > .section > .fp-tableCell > .content > p{
-        line-height: 21px !important;
-        margin-bottom: 21px;
-    }
-    
+
+
     /* the sidebar menu */
     .sidebar{
         display: flex;
         align-items: center;
+        height: 7vh;
+        max-height: 7vh !important;
     }
-    
-    
-    
+
+    /* fix the menu size in tablet */
+    .sidebar-home{
+        /* height: 7vh !important; */
+    }
+
+    /* the logo img */
+    .img-mask{
+        height: 5vh;
+        margin: 0 0 0 1.25rem !important;
+    }
+
+
      /* text in sidebar */
     .sidebar_text , .in-cpf-page-text{
         display: flex;
@@ -1226,13 +1363,99 @@ p >  a{
         float: right;
         text-align: right;
         font-size: 2vh;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.5px;
         margin-right: 1.3125rem !important;
         box-sizing: border-box;
         line-height: normal;
     }
-    
-    
+
+    /* each line */
+    .item-row{
+        height: 31vh;
+        max-height: 31vh;
+        background-color: white !important;
+    }
+
+    .item-last{
+        background-color: #f5f5f5 !important;
+    }
+
+    .email-name{
+      position: absolute !important;
+      margin-top: 5vh;
+      margin-left: 31px !important;
+    }
+
+
+    /* the email input */
+    .email{
+        font-size: 18px;
+        letter-spacing: -0.9px;
+        margin-left: 31px !important;
+    }
+
+    /* the password input and the button continue*/
+    .password, .btn-continue{
+      font-size: 21px;
+      letter-spacing: -1px;
+      margin-left: 31px !important;
+    }
+
+    /* change placeholder for input */
+    ::-webkit-input-placeholder,
+    :-moz-placeholder, /* Firefox 18- */
+    ::-moz-placeholder,  /* Firefox 19+ */
+    :-ms-input-placeholder
+    {
+      font-size: 21px !important;
+    }
+
+
+    .password-after , .error-message , .cpf-after{
+        font-size: 12px;
+        margin-left: 31px !important;
+        margin-top: 5vh !important;
+    }
+
+    .cpf-after{
+        margin-top: -40vh !important;
+    }
+
+    .loading-container, .visible{
+        margin-left: 31px !important;
+    }
+
+
+    /* eye checkbox */
+    label{
+        font-size: 14px !important;
+    }
+
+    .eye_style{
+        display: block;
+    }
+
+    input[type="checkbox"] + label {
+        display: none;
+    }
+
+    input[type="checkbox"]:hover + label {
+        display: none !important;
+    }
+
+    label{
+        display: none;
+    }
+
+    /* show eye input check box */
+    input[type="checkbox"].eye_style + label,
+    input[type="checkbox"].eye_style:active + label ,
+    input[type="checkbox"].eye_style:checked + label,
+    input[type="checkbox"].eye_style:hover + label
+    {
+        display: block !important;
+    }
+
     /* fix margin issue */
     .margin-right{
         /* padding-right : 30px; */
@@ -1240,31 +1463,57 @@ p >  a{
         clear: right !important;
         margin-right: 0px;
     }
-    
+
+    /* popover */
+    .popover{
+        background-color: white !important;
+        width: 85vw !important;
+        max-width: 85vw !important;
+        height: 32px !important;
+        font-size: 12px !important;
+        padding-left 0px !important;
+        border-left-width: 0px !important;
+        border-right-width: 0px !important;
+        border-bottom-width: 0px !important;
+        left: 31px !important;
+    }
+
+    .popover-content{
+        width: 85vw !important;
+        max-width: 85vw !important;
+        height: 32px !important;
+    }
+
+    .popover > .arrow {
+        border-width: 0px !important;
+    }
+
     /* home */
     .menu-item-text{
         font-size: 10px;
     }
-    
+
     .menu-img{
-        width: 24px;
-        height: 24px;    
+        width: 10vw;
+        height: 10vh;
     }
-    
+
     .sidebar-home{
+        height: 15vh;
+        max-height: 15vh !important;
         display: flex;
         align-items: center;
     }
-    
+
     .home_logo{
         margin: 2% auto auto 10% !important;
-        width: 89.4px;
-        height: 40.5px;
-        object-fit: contain;
-        max-height: 100%;
-        max-width: 100%;
+        max-height: 15vw !important;
+        min-height: 15vw !important;
+        max-width: 30vw !important;
+        min-width: auto !important;
+        width: auto !important;
     }
-    
+
     #fullpage > .section {
         height: 70vh !important;
         width: 100% !important;
@@ -1272,57 +1521,54 @@ p >  a{
         max-width: 100% !important;
         /* float: left !important; */
         flex-grow: 1 !important; /* to align side by side item */
-        padding-top: 39px;
-        padding-left:  40px !important;
-        padding-right: 40px !important;
+        padding-left:  15vw !important;
+        margin-right: 15vw !important;
         table-layout: auto;
     }
-    
+
     .fp-tableCell{
         height: 70vh !important;
         width: 100% !important;
         min-width: 100% !important;
         max-width: 100% !important;
-        /* padding-right: 15vw !important; */
+        padding-right: 15vw !important;
     }
-    
-    .section-menu{
-        padding-right: 0px;
-    }
-     
-    .item-align, 
-    .menu-item, 
+
+    .section-menu ,
+    .item-align,
+    .menu-item,
     .menu-item-align,
     .section-menu > li {
-        height: 72px;
-        max-height: 72px;
-        min-width:  90px;
-        max-width:  90px;
+        height: 15vh !important;
+        max-height: 15vh !important;
+        min-width:  30vw !important;
+        max-width:  30vw !important;
     }
-    
+
     .selected{
-        min-width: 90px;
-        max-width: 90px;
+        width: 25vw;
+        min-width: 30vw !important;
+        max-width: 30vw !important;
         height: 6px !important;
         min-height: 6px !important;
         max-height: 6px !important;
-        background-size: 90px 6px ; 
+        background-size: 30vw 6px !important;
     }
-    
+
     .exit_text{
-        font-size:14px;
+        font-size: 5vw;
     }
-    
+
     /* each page */
     .start > .title,
     .start > .fp-tableCell > .title{
         margin-top : 0 !important;
-        font-size: 28px;
+        font-size: 28px !important;
         font-weight: bold !important;
     }
 
     .help > .fp-tableCell > .wrap{
-        overflow-y: scroll !important;
+        width: 100vw;
     }
 
     .telephone > .title,
@@ -1330,21 +1576,27 @@ p >  a{
     .wifi > .title,
     .wifi > .fp-tableCell > .title,
     .wifi > .fp-tableCell > .wrap > .title,
-    .oiplay > .title , 
+    .oiplay > .title ,
     .recharge > .title ,
-    .oiplay > .fp-tableCell > .title , 
+    .oiplay > .fp-tableCell > .title ,
     .recharge > .fp-tableCell > .title ,
     .help > .title,
     .help > .fp-tableCell > .title,
     .help > .fp-tableCell > .wrap > .title
     {
         margin-top : 0 !important;
-        font-size: 21px;
+        font-size: 21px !important;
         font-weight: bold !important;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.1px;
     }
-    
-    
+
+    .help > .title,
+    .help > .fp-tableCell > .title,
+    .help > .fp-tableCell > .wrap > .title
+    {
+        margin-top: 39px !important;
+    }
+
     .start > .content,
     .start > .fp-tableCell > .content,
     .telephone > .content,
@@ -1352,9 +1604,9 @@ p >  a{
     .wifi > .content,
     .wifi > .fp-tableCell > .content,
     .wifi > .fp-tableCell > .wrap > .content,
-    .oiplay > .content , 
+    .oiplay > .content ,
     .recharge > .content ,
-    .oiplay > .fp-tableCell > .content , 
+    .oiplay > .fp-tableCell > .content ,
     .recharge > .fp-tableCell > .content ,
     .help > .content,
     .help > .fp-tableCell > .content,
@@ -1364,53 +1616,33 @@ p >  a{
     .wifi > .fp-tableCell > .wrap > .footer ,
     .recharge > .footer,
     .recharge > .fp-tableCell > .footer,
-    .help > .footer, 
+    .help > .footer,
     .help > .fp-tableCell > .footer ,
-    .help > .fp-tableCell > .wrap >  .footer,
-    .wifi > .footer, 
-    .wifi > .fp-tableCell > .footer, 
-    .wifi > .fp-tableCell > .wrap > .footer, 
-    .oiplay > .footer, .recharge > .footer,
-    .oiplay > .fp-tableCell > .footer,
-    .recharge > .fp-tableCell > .footer
+    .help > .fp-tableCell > .wrap >  .footer
     {
-        font-size: 14px;
-        margin: 14px 0px 14px 0px !important;
+        font-size: 14px !important;
+        margin: 13px 0px 0 0px !important;
         line-height: 20px !important;
-        width: inherit !important;
-        word-wrap: break-word;
-        padding-right: 0px;
+        width: 80vw !important;
     }
-    
-    .wifi > .fp-tableCell > .wrap > .footer > p{
-        font-size: 14px;
-        line-height: 20px !important;
-        width: inherit !important;
-        word-wrap: break-word;
-        padding-right: 0px;
-    }
-    
-    .footer > p{
-        font-size: 14px;
-    }
-    
+
     /* Fix the mobile content size */
     .help > .fp-tableCell > .wrap > .content{
         height: 100% !important;
-        width: 100% !important;
     }
-    
+
     .custom-li:before{
         font-size: 16px;
         line-height: 18px;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.5;
         margin-right: 9px;
         margin-left: 0px;
     }
     .custom-li {
         font-size: 16px;
         line-height: 18px;
-        letter-spacing: -0.3px;
+        letter-spacing: -0.5;
+        width : 50vw;
     }
 
     /* item */
@@ -1419,24 +1651,13 @@ p >  a{
     .help > .fp-tableCell > .wrap > .content > ol > .item{
         border-top: solid 1px #dddddd;
         border-bottom: solid 1px #dddddd;
-        padding-top: 14px;
-        padding-bottom: 14px;
+        padding-top: 33px;
+        padding-bottom: 33px;
         margin-right: 0px;
-        /* width: 70vw !important; */
+        width: 70vw !important;
     }
-    
-    /* ul content */
-    ul > li{
-        font-size: 14px;
-    }
-    
-    .item > div > p{
-        padding-right: 22.5px;
-    }
-    
-    
+
     /* internal intent content, inside collapse */
-    .help > .content > ol > .item,
     .help > .content > ol > .item > .collapse,
     .help > .content > ol > .item > .collapsing,
     .help > .content > ol > .item > .collapse.in,
@@ -1447,116 +1668,124 @@ p >  a{
     .help > .fp-tableCell > .wrap> .content > ol > .item > .collapsing,
     .help > .fp-tableCell > .wrap> .content > ol > .item > .collapse.in
     {
-        width: 70vw;
-        font-size: 14px;
-        margin-left: 5px;
-        padding-right: 0px;
-        letter-spacing: -0.3px;
+        width: 50vw;
+        font-size: 12px;
     }
-    
-    /* the arrow */
-    .img_container_help,
-    .img_container_help_down
-    {
-        /* width: 3vw;
-        height: 6vh;*/
-        background-size: 3.7vw;
-        background-repeat: no-repeat;
-        background-position: -0.3vw 0px;
-    }
-    
+
     /* active scroll vertical */
     .help > .fp-tableCell > .title ,
     .help > .fp-tableCell > .wrap >  .title{
         height : auto !important;
         display: inline-block;
     }
-    
+
     .help > .fp-tableCell > .content ,
     .help > .fp-tableCell > .wrap >  .content{
         height : auto !important;
         display: inline-block;
     }
-    
-    .help > .footer, 
+
+    .help > .footer,
     .help > .fp-tableCell > .footer ,
     .help > .fp-tableCell > .wrap >  .footer{
         height: auto !important;
         display: inline-block;
-        word-wrap: break-word;
+        width: 70vw !important;
     }
-    
+
     .telephone > .btn_installation,
     .telephone > .fp-tableCell > .btn_installation{
-      width : inherit;
+      width : 70vw;
       height: 70px;
-      
-    }
-    
-    
-    .help > .title,
-    .help > .fp-tableCell > .title,
-    .help > .fp-tableCell > .wrap > .title{
-        margin-bottom: 21px;
+
     }
 
     .wifi > .btn_connection,
     .wifi > .fp-tableCell > .btn_connection,
     .wifi > .fp-tableCell > .wrap > .btn_connection{
-      width : 100%;
+      width : 70vw;
       height: 70px;
-      margin-bottom: 0px;
     }
 
     .oiplay > .btn_oiplay ,
     .recharge > .btn_recharge,
     .oiplay > .fp-tableCell > .btn_oiplay ,
     .recharge > .fp-tableCell > .btn_recharge{
-      width : inherit;
+      width : 70vw;
       height: 70px;
-      margin-bottom: 0px;
     }
-    
-    .collapse > p,
-    .collapse.in,
-    .collapsing > p,
-    .collapse.in > p{
-        letter-spacing: -0.3px;
-        width: 70vw;
+
+    .help > .footer,
+    .help > .fp-tableCell > .footer,
+    .help > .fp-tableCell > .wrap > .footer{
+        margin-bottom: 300px !important;
     }
-    
-    .text_container_help{
-        width : 65vw;
-        float: right;
-        clear: right;
+}
+
+/* to manage the checkbox position */
+@media screen and (min-width: 1500px){
+    .padding-right{
+        width : 6vw !important;
     }
-    
-    .space-bottom{
-        margin-bottom: 14px !important;
+
+    .sidebar_text{
+        margin-top: 43px !important;
     }
-    
 }
 
 
+@media screen and (min-width: 1200px) and (max-width: 1499px){
+    .margin-right{
+        width : 4vw !important;
+    }
 
-@media screen and (min-width: 768px) and (max-width: 990px){
+    .sidebar_text{
+        margin-top: 43px !important;
+    }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px){
+    .margin-right{
+        width : 5vw !important;
+        margin-right: 70px !important;
+    }
+
+    /* fix the width on tablet */
+    #fullpage{
+        width: 70vw !important;
+        float: left;
+        clear: both;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 999px){
     .margin-right{
         margin-right: 70px !important;
     }
-    
+
     #fullpage{
         width: 70vw;
-        /* left: 30vw; */
-        /* top: -100vh; */
-        padding-right: 90px;
+        left: 30vw;
+        top: -100vh;
     }
-    
-    .content
-    .content > p{
-        width: 60vw !important;
-        padding-right:  70px !important;
-    }
+
+    /*.exit_text{
+        font-size: 10px;
+    }*/
 }
 
 
-
+/* change placeholder for input */
+::-webkit-input-placeholder ,
+:-moz-placeholder , /* Firefox 18- */
+::-moz-placeholder, /* Firefox 19+ */
+:-ms-input-placeholder {
+  font-family: 'SimplonBP-Light';
+  font-size: 42px;
+  font-style: normal;
+  font-stretch: normal;
+  line-height: 5.36;
+  letter-spacing: -2px;
+  color: #dddddd;
+  font-weight: 100 !important;
+}

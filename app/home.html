@@ -14,9 +14,10 @@
     <!-- build:css(.tmp) styles/main.css -->
     
     <!-- link rel="stylesheet" href="js/jquery-mobile/jquery.mobile-1.4.5.min.css" -->
-    <link rel="stylesheet" href="styles/main_prehome.css">
+    <link rel="stylesheet" href="styles/main.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap-theme.min.css">
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <!-- link rel="stylesheet" href="styles/homeanimation.css" -->
     
     <!-- fullPage.js plugin -->
     <!-- link rel="stylesheet" type="text/css" href="js/fullPage.js/jquery.fullPage.css" / -->
@@ -30,10 +31,13 @@
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
     
-    <div class="container-fluid">
+    <div class="container-fluid prehome homeanimation">
+        
+        <div class="background-white"></div>
+        
         <div class="row"> 
             <!-- side bar -->
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 sidebar sidebar-home">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2 sidebar sidebar-home sidebar_animation">
                 <!-- oi logo -->
                 <div class="col-xs-9 col-sm-1 col-md-1 col-lg-1 logo-container">
                     <img class="home_logo" src="svg/oi_logo.svg" />
@@ -44,11 +48,11 @@
             </div>
             
             <!-- menu scrollable -->
-            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2  sidebar-home sidebar-menu scrollable-menu">
+            <div class="col-xs-12 col-sm-2 col-md-2 col-lg-2  sidebar-home sidebar-menu scrollable-menu sidebar-menu-animation">
                 <!-- oi logo -->
                 <div id="navbar-dashboard" class="col-xs-6 col-sm-12 col-md-12">
                     <ul class="nav nav-tabs nav-stacked">
-                        <div class="section section-menu">
+                        <div class="section section-menu hide">
                             <!-- selected item -->
                             <div class="selected"></div>
                             
@@ -135,16 +139,37 @@
             <!-- end menu -->
             
             <!-- content -->
-            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8">
+            <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 content-home hide">
                 <div id="fullpage">
                     <!-- start -->
                     <div class="section start">
-                        <div class="title">Oi, Washington</div>
-                        <div class="content">
+                        <div class="title" data-toggle="popover" data-placement="top" data-content="Aviso importante">
+                            <div class="popover">
+                                <div class="arrow"></div>
+                                <div class="popover-content">Aviso importante</div>
+                            </div>
+                            Oi, Washington
+                        </div>
+                        <div class="content positive hide">
                             <p>O seu novo serviço ainda está sendo cadastrado na Minha Oi.</p>
 
-                            <p>Em breve, você terá acesso online a todos os serviços e facilidades da Minha Oi. Aproveite enquanto isso pra tirar suas dúvidas e descubra como a Oi pode te deixar mais conectado.</p>
+                            <p>Em breve, você terá acesso online a todos os serviços e 
+                                facilidades da Minha Oi. Aproveite enquanto isso pra tirar 
+                                suas dúvidas e descubra como a Oi pode te deixar mais conectado.</p>
                             
+                        </div>
+                        <div class="content baranimation hide">
+                            <p>O seu serviço já está ativo na Minha Oi.<br>
+                                Agora, você já pode ter acesso a todos os serviços e facilidades online.</p>
+
+                            <p>Vamos precisar apenas de uma validação, tudo bem?<br>
+                                É rapidinho e bem simples!  Vamos te enviar um código.</p>
+                        </div>
+                        <div class="footer">
+                            <button class="btn_start">Receber código no celular</button>
+                            <div class="link_after">
+                                <a href="#">Quero fazer depois</a>
+                            </div>
                         </div>
                     </div>
                     
@@ -164,9 +189,11 @@
                         <div class="wrap">
                             <div class="title">Oi WiFi</div>
                             <div class="content">
-                                <p>Busque o hotspot mais perto de você pra se conectar em alta velocidade gratuitamente, sem consumir sua franquia de internet móvel ou celular.</p>
+                                <p>Busque o hotspot mais perto de você pra se conectar em alta velocidade gratuitamente, 
+                                    sem consumir sua franquia de internet móvel ou celular.</p>
 
-                                <p>São mais de 2 milhões de pontos de acesso em todo o Brasil, entre aeroportos, hotéis, restaurantes, shoppings, cafés e outros locais. É só se cadastrar e aproveitar.</p>
+                                <p>São mais de 2 milhões de pontos de acesso em todo o Brasil, entre aeroportos, 
+                                    hotéis, restaurantes, shoppings, cafés e outros locais. É só se cadastrar e aproveitar.</p>
                             </div>
                             <button class="btn_connection btn_hover_dash">Conectar-se</button>
                             <div class="footer">
@@ -181,7 +208,8 @@
                         <div class="content">
                             <p>Clientes TV HD podem assistir ao melhor do nosso conteúdo no Oi Play.</p>
 
-                            <p class="space-bottom">Quando e onde quiser, direto do seu computador, tablet ou smartphone, podendo acessar de mais de um dispositivo ao mesmo tempo. Divirta-se!</p>
+                            <p class="space-bottom">Quando e onde quiser, direto do seu computador, 
+                                tablet ou smartphone, podendo acessar de mais de um dispositivo ao mesmo tempo. Divirta-se!</p>
                         </div>
                         <button class="btn_oiplay btn_hover_dash">Conheça o Oi Play</button>
                         <div class="footer">
@@ -194,7 +222,8 @@
                     <div class="section recharge">
                         <div class="title">Recarga</div>
                         <div class="content">
-                            <p>Recarregue qualquer celular Pré, Controle ou Oi Galera em instantes. Os valores são a partir de R$ 12 e você pode ganhar até 1 GB pra navegar à vontade.</p>
+                            <p>Recarregue qualquer celular Pré, Controle ou Oi Galera em instantes. 
+                                Os valores são a partir de R$ 12 e você pode ganhar até 1 GB pra navegar à vontade.</p>
 
                             <p class="space-bottom">É rápido, fácil e seguro.<br>
                             Aproveite também para programar próximas recargas.</p>
@@ -228,8 +257,11 @@
                                         </div>
 
                                         <div id="item1" class="collapse">
-                                            <p>É a área de atendimento online da Oi. Nela, você consegue visualizar os seus produtos e se relacionar com a Oi pela internet de forma simples e fácil.</p>
-                                            <p>Na Minha Oi, você acessa seu saldo, retira a 2ª via da conta, aproveita para se cadastrar na Conta Online ou no Débito Automático e encontrar todos os serviços da Oi em um só lugar.</p>
+                                            <p>É a área de atendimento online da Oi. Nela, você consegue visualizar os 
+                                                seus produtos e se relacionar com a Oi pela internet de forma simples e fácil.</p>
+                                            <p>Na Minha Oi, você acessa seu saldo, retira a 2ª via da conta, aproveita 
+                                                para se cadastrar na Conta Online ou no Débito Automático e encontrar
+                                                todos os serviços da Oi em um só lugar.</p>
                                         </div>
                                     </div>
 
@@ -272,8 +304,12 @@
                                             </div>
                                         </div>
                                         <div id="item3" class="collapse">
-                                            <p>Sim! Se você possui um smartphone ou tablet com sistema operacional Android ou iOS, pode baixar gratuitamente o aplicativo Minha Oi na <a href="https://play.google.com/store/apps/details?id=br.com.mobicare.minhaoi&hl=en">Google Play</a> ou na <a href="https://itunes.apple.com/br/app/minha-oi/id564319331">App Store</a> .</p>
-                                            <p>Você também pode acessar do seu celular normalmente pelo <a href="http://www.oi.com.br">www.oi.com.br</a>.</p>
+                                            <p>Sim! Se você possui um smartphone ou tablet com sistema operacional Android ou iOS,
+                                                pode baixar gratuitamente o aplicativo Minha Oi na
+                                                <a href="https://play.google.com/store/apps/details?id=br.com.mobicare.minhaoi&hl=en">Google Play</a> 
+                                                ou na <a href="https://itunes.apple.com/br/app/minha-oi/id564319331">App Store</a> .</p>
+                                            <p>Você também pode acessar do seu celular normalmente pelo 
+                                                <a href="http://www.oi.com.br">www.oi.com.br</a>.</p>
                                         </div>
                                     </div>
 
@@ -419,10 +455,6 @@
         
       
     <script>
-        
-        //todo: remove all display: flex
-        //todo: on resize or page reload, change the position to selected item
-        
         //test if mobile device
         isMobile = function(){
             if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i
@@ -666,10 +698,11 @@
             var containerWidth = $(window).width();
             
             //On mobile there is no path, return
-            /*if(containerWidth <= 768) {
+            if(containerWidth < 768) {
+                console.log('skip');
                 setActive($('#fullpage > .start'));
                 return;
-            }*/
+            }
             
             if(containerWidth > 768){
                 orientation = 'vertical'
@@ -714,11 +747,8 @@
         }
         
         
-        //TODO: bind mobile event in page load
+        //NOTE: bind mobile event in page load
         $(document).on('pageinit', function(event){
-           /*$("#listitem").swiperight(function() {
-                $.mobile.changePage("#page1");
-            });*/
             
             console.log('bind event on mobile device');
             
@@ -726,8 +756,143 @@
             moveAndDragPage()
         });
         
+        
+        //initial animation on enter this page
+        var animationOnStart = function(){
+            setTimeout(function(){
+                
+                $('.section-menu').css('opacity', 0)
+                $('.section-menu').removeClass('hide')
+                
+                $('.section-menu').stop().animate(
+                    {
+                        opacity: 1
+                    },
+                    700,
+                    '',
+                    function(){
+                        //after complete, here load the pre-home content
+                        $('.content-home').removeClass('hide')
+                        $('.content-home').css('opacity' , 0)
+                        $('.content-home').stop().animate({
+                            opacity: 1
+                        } , 800 , '', function(){
+                            
+                        })
+
+                    }
+                )
+            } , 100)
+        }
+        
+        //create any animation on start page
+        function animatePage(path){
+            var positive = path.indexOf('#positive') !== -1 ? true : false,
+                barAnimation = path.indexOf('#baranimation') !== -1 ? true : false;
+            
+            var width = $(window).width();
+            
+            
+            //animation from cpf page
+            if(positive){
+                $('.sidebar').removeClass('sidebar_animation');
+                $('.scrollable-menu').removeClass('sidebar-menu-animation');
+                $('.positive').removeClass('hide');
+                $('.popover').addClass('hide');
+                $('.btn_start').addClass('hide');
+                $('.link_after').addClass('hide')
+                
+                //has animation if screen is below 768
+                if(width > 767){
+                    console.log('positive animation');
+                    animationOnStart();
+                } else {
+                     $('.section-menu').removeClass('hide')
+                     $('.content-home').removeClass('hide')
+                }
+            }
+            //animation from confirmation page
+            else if(barAnimation){
+                
+                $('.section-menu').removeClass('hide')
+                $('.content-home').removeClass('hide')
+                $('.baranimation').removeClass('hide')
+                
+                $('.link_after').animate({
+                        opacity : 0
+                    } , 900 , '' , function(){
+                        //$('.link_after').addClass('hide')
+                    })
+                
+                if(width > 767){ //desktop and mobile tablet load
+                    $('#fullpage').css('width','85vw');
+                    //$('.sidebar-home').addClass('animate_bar')
+                    setTimeout(function(){
+                        $('#fullpage')
+                            .animate(
+                                {
+                                    left: '16.666vw',
+                                    width: '70vw'
+                                } 
+                                , 700 , '' , function(){
+                                    //$('.scrollable-menu').css('z-index','4000');
+                                    $('.scrollable-menu').addClass('scrollbar_z_index');
+                                }
+                        )
+                    } , 700)
+                } else { //mobile small device
+                    $('.sidebar').removeClass('sidebar_animation')
+                    $('.scrollable-menu').removeClass('sidebar-menu-animation');
+                    
+                    //disabling scrolling
+                    $('#fullpage >.section').removeClass('active');
+                    setActive($('ul > .section > li.start'));
+                    setActive($('#fullpage >.section.start'));
+                    if($.fn.fullpage) $.fn.fullpage.setAllowScrolling(false);
+                    $('#fullpage').stop().scrollTo('.start' , 300 , {axis : 'x'} );
+                    
+                    $('#fullpage').css('height','calc(100vh - 70px)');
+                    $('#fullpage').css('position','absolute');
+                    $('#fullpage').css('top','-70px');
+                    
+                    setTimeout(function(){
+                        $('#fullpage')
+                            .animate(
+                                {
+                                    top: '0px',
+                                    height: 'calc(100vh - 142px)'
+                                } 
+                                , 700 , '' , function(){
+                                    //$('.scrollable-menu').css('z-index','1000');
+                                }
+                        )
+                    } , 700)
+                }
+                
+            }
+            
+            //common load page
+            else {
+                $('.sidebar').removeClass('sidebar_animation')
+                $('.scrollable-menu').removeClass('sidebar-menu-animation');
+                $('.section-menu').removeClass('hide');
+                $('.content-home').removeClass('hide');
+                $('.positive').removeClass('hide');
+                $('.popover').addClass('hide');
+                $('.btn_start').addClass('hide');
+                $('.link_after').addClass('hide')
+                
+                //setup the fullpage height
+                $('#fullpage').css('height','calc(100vh - 70px)');
+            }
+        }
+        
 
         $(document).ready(function(){
+            
+            //get the current path
+            var path = $(location).attr('href')
+            
             
             //window.getSelection().removeAllRanges(); 
             
@@ -772,11 +937,12 @@
                 normalScrollElements: '.menu-item, .help, .help > .fp-tableCell' , //exclude itens
                 bigSectionsDestination : '#fullpage',
                 onLeave: function(index, nextIndex, direction){
+
+                    var anchorLink = "";
                     
-                },
-                //add after load event
-                //using anchorLink to scroll to new position
-                afterLoad: function(anchorLink, index){
+                    var items = ['start', 'telephone', 'wifi', 'oiplay', 'recharge', 'help'];
+                    
+                    anchorLink = items[parseInt(nextIndex) - 1];
                     
                     var containerWidth = $(window).width();
                     
@@ -784,15 +950,54 @@
                     //small screens
                     //changed to 768, before 1200
                     if(containerWidth < 768){
-                        changeMarkerPosition('horizontal' , anchorLink)
-                        focusMarkerPosition('horizontal' , anchorLink);
+                        //FIX: the main error is change the mark down on start any path to the end path
+                        //Ex: initial page is #start, but the markdown move to #help
+                        //changeMarkerPosition('horizontal' , anchorLink)
+                        //focusMarkerPosition('horizontal' , anchorLink);
+                        
+    
                     } else {
                         changeMarkerPosition('vertical' , anchorLink);
                         focusMarkerPosition('vertical' , anchorLink);
+                        
                     }
+                },
+                //add after load event
+                //using anchorLink to scroll to new position
+                afterLoad: function(anchorLink, index){
+                    
+                    /*var containerWidth = $(window).width();
+                    
+                    
+                    //small screens
+                    //changed to 768, before 1200
+                    if(containerWidth < 768){
+                        //FIX: the main error is change the mark down on start any path to the end path
+                        //Ex: initial page is #start, but the markdown move to #help
+                        //changeMarkerPosition('horizontal' , anchorLink)
+                        //focusMarkerPosition('horizontal' , anchorLink);
+                        
+    
+                    } else {
+                        changeMarkerPosition('vertical' , anchorLink);
+                        focusMarkerPosition('vertical' , anchorLink);
+                        
+                    }*/
                     
                 }
             });
+            
+            
+            /*var hasAnimation = false;
+            if(hasAnimation){
+                 animationOnStart();
+            }
+            else {
+                $('.section-menu').removeClass('hide')
+                $('.content-home').removeClass('hide')
+            }*/
+            
+           animatePage(path);
             
             
             containerWidth = $(window).width();
@@ -800,9 +1005,11 @@
             if(containerWidth < 768){
                 //disable auto scroll on mobile device
                 $.fn.fullpage.setAutoScrolling(false);
+                $('#fullpage').css('height','calc(100vh - 70px)');
             } else {
                 //enable auto scroll on desktop device
                 $.fn.fullpage.setAutoScrolling(true);
+                $('#fullpage').css('height','100%');
             }
             
             $(window).resize(function(){
@@ -820,7 +1027,9 @@
                 //move to current path after resizea or reload page stop
                 clearTimeout(window.resizedFinished);
                 window.resizedFinished = setTimeout(function(){
-                    console.log('Resized finished.');
+                    //console.log('Resized finished.');
+                    
+                    location.reload();
 
                     moveToCurrentPath()
                 }, 250);
@@ -836,6 +1045,8 @@
                     
                     //disable auto scroll on mobile device
                     $.fn.fullpage.setAutoScrolling(false);
+                    
+                    $('#fullpage').css('height','calc(100vh - 70px)');
                     
                     $('.active').ready(function(){
                         var el = $('.active')
@@ -854,6 +1065,8 @@
                     //enable auto scroll on desktop device
                     $.fn.fullpage.setAutoScrolling(true);
                     
+                    $('#fullpage').css('height','100%');
+                    
                     $('.active').ready(function(){
                         var el = $('.active')
                         
@@ -865,7 +1078,8 @@
                                 .css('cssText', 'left: calc(100% - 6px) !important');
 
                             $('.selected').css({
-                                top: top
+                                top: top,
+                                left: '100%'
                             });
                         }
                     })
@@ -885,18 +1099,7 @@
                     
                     containerWidth = $(window).width();
                     
-                    //TODO: remove all class active and set this element with it class
-
-                    //unselect all li
-                    /*$('.section-menu')
-                        .children('li')
-                        .removeClass('active');
-
-                    //set this el as active
-                    $(self).addClass('active');*/
                     
-                    
-
 
                     //windows size
                     var el = $('#fullpage >.section.' + name);
@@ -940,7 +1143,7 @@
                 })
             })
             
-            //FIXME: Try stop scroll propagation
+            //NOTE: stop scroll propagation
             $('#fullpage').scroll(function(event){
                 //try fix scroll on menu
                 event.stopPropagation();

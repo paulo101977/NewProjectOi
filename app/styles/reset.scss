@@ -43,7 +43,7 @@ body, html {
     width: 100% !important;
 }
 
-.sidebar {
+.sidebar_reset {
   height: 100vh;
   background-image: linear-gradient(135deg, #EB2D82, #EF3A67 50%, #F4484C 100%) !important;
 }
@@ -66,20 +66,23 @@ body, html {
 
 /* confirmation screen */
 .btn_confirmation{
-  width: 270px;
-  height: 70px;
-  border-radius: 3px;
-  border: solid 3px #ffffff !important;
-  background-color: #ffffff !important;
-  border-style: solid !important;
-  border-width: 1px;
-  border-image-source: linear-gradient(to right, #ea288c, #ff6d00 90%, #ffff00);
-  border-image-slice: 1;
-  font-size: 21px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  color: #e03d6f;
+    width: 270px;
+    height: 70px;
+    border-radius: 3px;
+    border: solid 3px #ffffff !important;
+    background-color: #ffffff !important;
+    border-style: solid !important;
+    border-width: 1px;
+    border-image-source: linear-gradient(to right, #ea288c, #ff6d00 90%, #ffff00);
+    border-image-slice: 1;
+    font-family: "SimplonBP-Regular";
+    padding-left: 30px;
+    font-size: 21px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    letter-spacing: -0.4px;
+    color: #e03d6f;
 }
 
 .confirmation_logo{
@@ -101,7 +104,7 @@ body, html {
     outline: 0 !important;
 }
 
-.confirmation{
+.confirmation_reset{
     display: flex;
     -webkit-flex-direction: column; /* Safari */
     flex-direction:         column;
@@ -111,32 +114,28 @@ body, html {
     height: 100vh;
 }
 
-.confirmation > .title{
+.confirmation_reset > .title{
+  font-family: 'SimplonOi-Headline';
   font-size: 63px;
   font-weight: normal;
   font-style: normal;
   font-stretch: normal;
+  letter-spacing: -2.2px;
   color: #ffffff;
+  width: 540px;
+  line-height: 1 !important;
 }
 
-.confirmation > .content{
-  font-family: 'SimplonBP-Light';
-  margin-top: 5vh;
-  margin-bottom: 5vh;
-  max-width: 40vw;
-  font-size: 28px;
-  font-weight: normal;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.5;
-  color: #ffffff;
+
+p{
+    line-height: 1 !important;
 }
 
 
 .confirmation_txt{
     float: left;
     clear: left;
-    margin-left: 30px;
+    margin-right: 32px;
 }
 
 .confirmation_img{
@@ -155,6 +154,10 @@ body, html {
 {
     background-image: url(../svg/confirmation_active.svg) !important;
     color: #ffffff;
+}
+
+.btn_container{
+    margin-top: 38px;
 }
  
 
@@ -179,6 +182,17 @@ body, html {
     overflow-y: scroll;
 }
 
+a{
+    display: flex;
+    align-items: center;
+}
+
+a:hover,
+a:active,
+a:focus{
+    text-decoration: none !important;
+}
+
 /* home screen */
 /* I had to modify this to resize on table size */
 /* before the max-width was 1200px */
@@ -196,9 +210,9 @@ body, html {
 
 /* Responsive: Portrait tablets and up */
 @media screen and (min-width: 768px) and (max-width: 1199px){
-     
-    
-    
+    .title{
+        width: auto !important;
+    }
 }
 
 /* Responsive: Portrait tablets and up */
@@ -212,10 +226,10 @@ body, html {
         width: 89.4px;
         height: 40.5px;
         margin-left: 10vw;
-        margin-top: 15vh;
+        margin-top: 12vh;
     }
     
-    .confirmation {
+    .confirmation_reset {
         height: auto;
     }
     
@@ -223,21 +237,13 @@ body, html {
         margin-left: 10vw;
         margin-top: 15vh;
         font-family: 'SimplonBP-Light';
-        font-size: 28px !important;
-        letter-spacing: -1px;
+        font-size: 37px !important;
+        letter-spacing: -0.75px !important;
         color: #ffffff;
+        line-height: 1 !important;
+        width: 80vw !important;
     }
     
-    .content{
-        font-family: 'SimplonBP-Light' !important;
-        font-size: 21px !important;
-        line-height: 1.43;
-        letter-spacing: -0.5px;
-        color: #ffffff;
-        margin-left: 10vw;
-        margin-top: 5vh;
-        max-width: 80vw !important;
-    }
     
     .btn_confirmation{
         border-image-slice: 1;
@@ -252,6 +258,10 @@ body, html {
         width: 80vw !important;
     }
     
+    .btn_container{
+        margin-top: 5vh;
+    }
+    
     .row {
         overflow-y: scroll !important;
         max-height: 100%;
@@ -259,11 +269,21 @@ body, html {
         position: relative;
     }
     
-    .sidebar {
+    .sidebar_reset {
         position: absolute;
         height: 110vh;
         /* top: 0px; */
         /* left: 0px; */
     }   
+    
+    .confirmation_txt{
+        margin-right: 0px;
+    }
+    
+    .confirmation_img_container{
+        position: absolute;
+        left: calc(77%);
+        transform: translate(0px, -4px)
+    }
 }
 

@@ -23,14 +23,17 @@
     <![endif]-->
     
     <div class="container-fluid">
+        <div class="background-white"></div>
+        
         <div class="row">
             <form name="formcpf">
+                
                 
                 <!-- side bar -->
                 <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4 sidebar">
                     <!-- oi logo -->
                     <div class="col-xs-6 col-sm-12 col-md-12">
-                        <img class="img-mask" src="svg/oi_logo.svg" />
+                        <img class="img-mask home_logo" src="svg/oi_logo.svg" />
                     </div>
                     <div class="col-xs-6 col-sm-12 col-md-12">
                         <div class="sidebar_text in-cpf-page-text">
@@ -38,6 +41,7 @@
                         </div>
                     </div>
                 </div>
+                
 
                 <!-- content -->
                 <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 cpf_content">
@@ -116,6 +120,8 @@
     <script>
         $(document).ready(function(){
             
+            var hadAnimatedPage = false;
+            
             $(".cpf-after").hide();
             
             $("#cpf").popover({
@@ -184,6 +190,50 @@
                 });
             }
             
+            //TODO: implements animation here
+            var startAnimationOnExitPage = function(){
+                
+                //TODO: insert animation on logo
+                if(!hadAnimatedPage){
+                    
+                    hadAnimatedPage = true;
+                    
+                    var width = $(window).width();
+                    
+                    if(width > 767){
+                        //set the hide class
+                        $('.cpf_content').addClass('hide')
+
+                        //fadeout the sidebar cpf text
+                        $('.sidebar_text').stop().animate({
+                            opacity : 0
+                        } , 300 
+                        , '' //easy
+                        , function(){ //on end the animation
+
+                        })
+
+
+                        //sidebar resize width
+                        var sidebarWidth = $('.sidebar').width();
+                        $('.sidebar').stop().animate(
+                            {
+                                //width : parseInt(sidebarWidth)/2
+                                width : '16.66666%'
+                            } , 700 , ''
+                            , function(){ 
+
+                                //change the path
+                                window.location.replace("home.html#positive")
+
+                            }
+                        )
+                    } else {
+                        window.location.replace("home.html#positive")
+                    }
+                }
+            }
+            
             function callback(){
                 //console.log('loading done');
                 $('.loading-container').removeClass('visible');
@@ -196,6 +246,7 @@
                     
                     setTimeout(function(){
                         //window.location.replace("home.html")
+                        startAnimationOnExitPage();
                     }
                     ,1000)
                 },1000);
